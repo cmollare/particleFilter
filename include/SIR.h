@@ -15,6 +15,9 @@ class SIR : public _Filter<Particle, Viewer>
 		virtual void update(_Observation& observation);
 		virtual void update(_Observation& observation, Viewer& viewer);
 		virtual void step();
+
+	protected:
+		double _Ns;
 };
 
 #include "SIR.tpp"

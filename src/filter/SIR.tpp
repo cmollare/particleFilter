@@ -3,6 +3,7 @@
 template <class Particle, class Viewer>
 SIR<Particle, Viewer>::SIR(int nbParticles) : _Filter<Particle, Viewer>(nbParticles)
 {
+	this->_Ns=nbParticles/4;
 }
 
 template <class Particle, class Viewer>
@@ -25,8 +26,9 @@ void SIR<Particle, Viewer>::update(_Observation& observation)
 {
 	this->step();
 	this->updateWeights(observation);
+	this->calcNeff();
 	this->computeMMSE();
-	this->resample();
+	if (this->_Neff < this->_Ns) this->resample();
 }
 
 template <class Particle, class Viewer>
@@ -35,9 +37,13 @@ void SIR<Particle, Viewer>::update(_Observation& observation, Viewer& viewer)
 	this->step();
 	this->updateWeights(observation);
 	viewer.displayWeightedParticles(this->_vParticles, this->_vWeights);
+	this->calcNeff();
 	this->computeMMSE();
-	this->resample();
-	viewer.displayResampling(this->_vParticles);
+	if (this->_Neff < this->_Ns)
+	{
+		this->resample();
+		viewer.displayResampling(this->_vParticles);
+	}
 	viewer.displayEstimatedParticle(this->_mmseParticle);
 	viewer.updateDisplay();
 }

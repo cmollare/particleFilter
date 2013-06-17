@@ -21,6 +21,7 @@ class _Filter
 		virtual void updateWeights(_Observation& observation);
 		virtual void resample();
 		virtual void computeMMSE();
+		virtual void calcNeff();
 
 		inline std::vector<Particle*>& getParticleVector()
 		{
@@ -47,6 +48,8 @@ class _Filter
 		std::vector<double> _vWeights;
 		std::vector<double> _cdf;
 		double _weightNorm;
+
+		double _Neff;
 
 		boost::random::mt19937_64 _rng;
 };

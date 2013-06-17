@@ -99,4 +99,12 @@ void _Filter<Particle, Viewer>::computeMMSE()
 	_mmseParticle->setStateVector(tempoStateVector);
 }
 
+template <class Particle, class Viewer>
+void _Filter<Particle, Viewer>::calcNeff()
+{
+	this->_Neff=0;
+	for (int i=0 ; i<this->_nbParticles ; i++) this->_Neff += this->_vWeights[i]*this->_vWeights[i];
+	this->_Neff = 1./this->_Neff;
+}
+
 #endif
