@@ -11,13 +11,10 @@ class SIR : public _Filter<Particle, Viewer>
         SIR(int nbParticles);
         ~SIR();
 
-		virtual void init();
+		virtual void init(_Observation& observation);
 		virtual void update(_Observation& observation);
 		virtual void update(_Observation& observation, Viewer& viewer);
 		virtual void step();
-
-	protected:
-		double _Ns;
 };
 
 #include "SIR.tpp"

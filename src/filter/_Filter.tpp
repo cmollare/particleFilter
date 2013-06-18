@@ -3,6 +3,8 @@
 template <class Particle, class Viewer>
 _Filter<Particle, Viewer>::_Filter(int nbParticles) : _nbParticles(nbParticles)
 {
+	this->_Ns=nbParticles/1.2;
+
 	_pFilterEnv = new FilterEnv;
 
 	//Particles allocation
@@ -25,7 +27,7 @@ _Filter<Particle, Viewer>::~_Filter()
 }
 
 template <class Particle, class Viewer>
-void _Filter<Particle, Viewer>::init()
+void _Filter<Particle, Viewer>::init(_Observation& observation)
 {
 
 	//Initiate weights

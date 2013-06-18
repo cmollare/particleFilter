@@ -1,7 +1,9 @@
 #include "SIR.h"
+#include "ICOND.h"
 #include "DemoObs.h"
 #include "DemoParticle.h"
 #include "DemoViewer.h"
+#include "MouseDetector.h"
 
 #include <opencv2/opencv.hpp>
 
@@ -21,13 +23,15 @@ int main()
 	cap >> frame;
 	cv::imshow("SRC", frame);
 
-	SIR<DemoParticle, DemoViewer> filter(500);
-	filter.init();
+
 
 	cv::Vec3b vec(255, 255, 255);
 	DemoObs obs(frame, vec);
 
 	viewer.updateImage(frame);
+
+	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(500, 0.05, 0.3);
+	filter.init(obs);
 
 	for (;;)
 	{

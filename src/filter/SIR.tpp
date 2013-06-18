@@ -3,7 +3,6 @@
 template <class Particle, class Viewer>
 SIR<Particle, Viewer>::SIR(int nbParticles) : _Filter<Particle, Viewer>(nbParticles)
 {
-	this->_Ns=nbParticles/4;
 }
 
 template <class Particle, class Viewer>
@@ -12,9 +11,9 @@ SIR<Particle, Viewer>::~SIR()
 }
 
 template <class Particle, class Viewer>
-void SIR<Particle, Viewer>::init()
+void SIR<Particle, Viewer>::init(_Observation& observation)
 {
-	_Filter<Particle, Viewer>::init();
+	_Filter<Particle, Viewer>::init(observation);
 	for (int i=0 ; i<this->_nbParticles ; i++)
 	{
 		this->_vParticles[i]->sampleFromPrior();

@@ -13,6 +13,11 @@ class DemoObs : public _Observation
         virtual double computeLikelihood(_Particle& particle);
         void update(cv::Mat& newObs);
 
+		inline cv::Mat& getCurrentObs()
+		{
+			return _obs;
+		}
+
     protected:
         cv::Mat _obs;
 		cv::Vec3b _colorModel;

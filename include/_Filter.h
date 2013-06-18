@@ -14,7 +14,7 @@ class _Filter
 		_Filter(int nbPaticles);
 		~_Filter();
 
-		virtual void init();
+		virtual void init(_Observation& observation);
 		virtual void update(_Observation& observation)=0;
 		virtual void update(_Observation& observation, Viewer& viewer)=0;
 		virtual void step()=0;
@@ -50,6 +50,7 @@ class _Filter
 		double _weightNorm;
 
 		double _Neff;
+		double _Ns;
 
 		boost::random::mt19937_64 _rng;
 };
