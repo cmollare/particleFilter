@@ -3,7 +3,7 @@
 DemoParticle::DemoParticle(FilterEnv* pFilterEnv) : _Particle(pFilterEnv)
 {
     _stateVector.resize(2, 0);
-	_varDetector=20;
+	_varDetector=5;
 	_varDynamic=10;
 }
 

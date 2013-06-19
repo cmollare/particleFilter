@@ -4,11 +4,26 @@ template<class Particle, class Detector, class Viewer>
 ICOND<Particle, Detector, Viewer>::ICOND(int nbParticles, double q, double r) : _Filter<Particle, Viewer>(nbParticles), _q(q), _r(r)
 {
 	this->_detector = new Detector();
+	this->_isDetectorAllocated = true;
+}
+
+template<class Particle, class Detector, class Viewer>
+ICOND<Particle, Detector, Viewer>::ICOND(Detector* detector, int nbParticles, double q, double r) : _Filter<Particle, Viewer>(nbParticles), _q(q), _r(r)
+{
+	this->_detector = detector;
+	this->_isDetectorAllocated = false;
+}
+
+template<class Particle, class Detector, class Viewer>
+ICOND<Particle, Detector, Viewer>::~ICOND()
+{
+	if (this->_isDetectorAllocated) delete this->_detector;
 }
 
 template<class Particle, class Detector, class Viewer>
 void ICOND<Particle, Detector, Viewer>::init(_Observation& observation)
 {
+	this->_Ns=this->_nbParticles/1.3;
 	this->_Filter<Particle, Viewer>::init(observation);
 	this->_detector->init(observation);
 	this->_vLambda.resize(this->_nbParticles, 1);
@@ -32,6 +47,7 @@ void ICOND<Particle, Detector, Viewer>::update(_Observation& observation)
 template<class Particle, class Detector, class Viewer>
 void ICOND<Particle, Detector, Viewer>::update(_Observation& observation, Viewer& viewer)
 {
+	this->_detector->detect(observation); //update detector
 	this->step();
 	this->updateWeights(observation);
 	viewer.displayWeightedParticles(this->_vParticles, this->_vWeights);
@@ -54,6 +70,8 @@ void ICOND<Particle, Detector, Viewer>::step()
 	boost::random::mt19937* pRng = this->_pFilterEnv->getRngSeed();
 	boost::random::uniform_01<boost::random::mt19937> rand(*pRng);
 
+	bool isDetection = this->_detector->isDetected();
+
 	int nbPrior=0, nbImp=0, nbDyn=0;
 
 	for (int i=0 ; i<this->_nbParticles ; i++)
@@ -68,11 +86,22 @@ void ICOND<Particle, Detector, Viewer>::step()
 		}
 		else if ((alpha >= this->_q) && (alpha < this->_q+this->_r))//sample from importance
 		{
-			this->_vParticles[i]->sampleFromPrior();//to replace
-			g = this->_vParticles[i]->evaluateFromPrior();
-			f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
-			this->_vLambda[i] = f/g;
-			nbImp++;
+			if (!isDetection) //if no detection, sample from dynamic
+			{
+				//this->_vParticles[i]->sampleFromPrior();
+				//g = this->_vParticles[i]->evaluateFromPrior();
+				this->_vParticles[i]->sampleFromDynamic();
+				nbDyn++;
+			}
+			else //else sample from detection
+			{
+				this->_vParticles[i]->sampleFromDetector(this->_detector->getDetection());
+				g = this->_vParticles[i]->evaluateFromPrior();
+				f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
+				this->_vLambda[i] = f/g;
+				nbImp++;
+			}
+
 		}
 		else
 		{

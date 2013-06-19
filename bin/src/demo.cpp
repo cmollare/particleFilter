@@ -29,8 +29,10 @@ int main()
 	viewer.updateImage(frame);
 	viewerSIR.updateImage(frame);
 
+	MouseDetector mouseDet("ICOND");
+
 	SIR<DemoParticle, DemoViewer> filterSIR(500);
-	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(500, 0.001, 0.1);
+	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(&mouseDet, 500, 0.001, 0.5);
 	filter.init(obs);
 	filterSIR.init(obs);
 
@@ -45,7 +47,8 @@ int main()
 		filterSIR.update(obs, viewerSIR);
 
 
-		if (cv::waitKey(60) >= 0) break;
+		short key = cv::waitKey(60);
+		if (key == 27) break;
 	}
 
 

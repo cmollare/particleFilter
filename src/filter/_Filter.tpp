@@ -3,7 +3,7 @@
 template <class Particle, class Viewer>
 _Filter<Particle, Viewer>::_Filter(int nbParticles) : _nbParticles(nbParticles)
 {
-	this->_Ns=nbParticles/1.2;
+	this->_Ns=nbParticles/4;
 
 	_pFilterEnv = new FilterEnv;
 

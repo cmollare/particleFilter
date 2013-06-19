@@ -9,22 +9,27 @@ typedef struct MouseEvent
 {
     int x;
     int y;
+	bool isDetection;
 }MouseEvent;
 
 static void onMouse(int evt, int x, int y, int flags, void* params)
 {
     MouseEvent *mouseEvt = (MouseEvent*) params;
 
-    if(evt==CV_EVENT_MOUSEMOVE && flags==CV_EVENT_FLAG_CTRLKEY)
+	mouseEvt->isDetection = false;
+
+	if(evt==CV_EVENT_MOUSEMOVE && (flags & CV_EVENT_FLAG_CTRLKEY))
     {
-        std::cout << x << " " << y << std::endl;
+		mouseEvt->x = x;
+		mouseEvt->y = y;
+		mouseEvt->isDetection = true;
     }
 }
 
 class MouseDetector : public _Detector
 {
     public:
-        MouseDetector();
+		MouseDetector(std::string windowName="RES");
         ~MouseDetector();
 
         virtual void init(_Observation& obs);
@@ -32,6 +37,7 @@ class MouseDetector : public _Detector
 
     protected:
         MouseEvent* _mouseEvent;
+		std::string _windowName;
 };
 
 #endif // MOUSEDETECTOR_H
