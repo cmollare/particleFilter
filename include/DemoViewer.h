@@ -8,7 +8,7 @@
 class DemoViewer : public Viewer<DemoParticle>
 {
     public:
-        DemoViewer();
+		DemoViewer(std::string outputName);
         ~DemoViewer();
 
 		void updateImage(cv::Mat& newImage);
@@ -19,6 +19,7 @@ class DemoViewer : public Viewer<DemoParticle>
 		void updateDisplay();
 
     protected:
+		std::string _outputName;
         cv::Mat _currentImage;
         cv::Mat _outputImage;
 

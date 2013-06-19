@@ -1,9 +1,8 @@
 #include "DemoViewer.h"
 
-DemoViewer::DemoViewer() : Viewer()
+DemoViewer::DemoViewer(std::string outputName) : Viewer(), _outputName(outputName)
 {
-    cv::namedWindow("SRC");
-    cv::namedWindow("RES");
+	cv::namedWindow(_outputName.c_str());
 }
 
 DemoViewer::~DemoViewer()
@@ -35,7 +34,7 @@ void DemoViewer::displayWeightedParticles(std::vector<DemoParticle*>& particles,
 		pt.x = particles[i]->getStateVector()[0];
 		pt.y = particles[i]->getStateVector()[1];
 		int radius = int(weights[i]*1000);
-		cv::circle(_outputImage, pt, radius, cv::Scalar(0, 255, 0), 1);
+		cv::circle(_outputImage, pt, radius, cv::Scalar(0, 0, 255), 1);
 	}
 }
 
@@ -61,6 +60,5 @@ void DemoViewer::displayEstimatedParticle(DemoParticle* estimatedParticle)
 
 void DemoViewer::updateDisplay()
 {
-	cv::imshow("SRC", _currentImage);
-	cv::imshow("RES", _outputImage);
+	cv::imshow(_outputName.c_str(), _outputImage);
 }

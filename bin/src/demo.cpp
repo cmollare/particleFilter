@@ -12,7 +12,8 @@ int main()
 
 	cv::VideoCapture cap(0);
 	cv::Mat frame;
-	DemoViewer viewer;
+	DemoViewer viewer("ICOND");
+	DemoViewer viewerSIR("SIR");
 
 	if(!cap.isOpened())
 	{
@@ -21,17 +22,17 @@ int main()
 	}
 
 	cap >> frame;
-	cv::imshow("SRC", frame);
 
-
-
-	cv::Vec3b vec(255, 255, 255);
+	cv::Vec3b vec(0, 0, 0);
 	DemoObs obs(frame, vec);
 
 	viewer.updateImage(frame);
+	viewerSIR.updateImage(frame);
 
-	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(500, 0.05, 0.3);
+	SIR<DemoParticle, DemoViewer> filterSIR(500);
+	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(500, 0.001, 0.1);
 	filter.init(obs);
+	filterSIR.init(obs);
 
 	for (;;)
 	{
@@ -39,6 +40,9 @@ int main()
 		obs.update(frame); //update observation
 		viewer.updateImage(frame); //update viewer
 		filter.update(obs, viewer); //update filter
+
+		viewerSIR.updateImage(frame);
+		filterSIR.update(obs, viewerSIR);
 
 
 		if (cv::waitKey(60) >= 0) break;
