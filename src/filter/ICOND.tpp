@@ -23,7 +23,7 @@ ICOND<Particle, Detector, Viewer>::~ICOND()
 template<class Particle, class Detector, class Viewer>
 void ICOND<Particle, Detector, Viewer>::init(_Observation& observation)
 {
-	this->_Ns=this->_nbParticles/1.3;
+	this->_Ns=this->_nbParticles/1.2;
 	this->_Filter<Particle, Viewer>::init(observation);
 	this->_detector->init(observation);
 	this->_vLambda.resize(this->_nbParticles, 1);

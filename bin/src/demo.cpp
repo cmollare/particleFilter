@@ -12,7 +12,7 @@ int main()
 
 	cv::VideoCapture cap(0);
 	cv::Mat frame;
-	DemoViewer viewer("ICOND");
+	DemoViewer viewer("ICOND", "CTRL");
 	DemoViewer viewerSIR("SIR");
 
 	if(!cap.isOpened())
@@ -39,8 +39,11 @@ int main()
 	for (;;)
 	{
 		cap >> frame;
-		obs.update(frame); //update observation
+
 		viewer.updateImage(frame); //update viewer
+		obs.update(frame); //update observation
+		obs.setColorModel(viewer.getCurrentObs());
+
 		filter.update(obs, viewer); //update filter
 
 		viewerSIR.updateImage(frame);

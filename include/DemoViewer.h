@@ -9,6 +9,7 @@ class DemoViewer : public Viewer<DemoParticle>
 {
     public:
 		DemoViewer(std::string outputName);
+		DemoViewer(std::string outputName, std::string controllerName);
         ~DemoViewer();
 
 		void updateImage(cv::Mat& newImage);
@@ -18,10 +19,20 @@ class DemoViewer : public Viewer<DemoParticle>
 		void displayEstimatedParticle(DemoParticle* estimatedParticle);
 		void updateDisplay();
 
+		inline cv::Vec3b& getCurrentObs()
+		{
+			return _currentObs;
+		}
+
     protected:
+		void updateCtrlImage();
+
 		std::string _outputName;
+		std::string _controllerName;
         cv::Mat _currentImage;
         cv::Mat _outputImage;
+		cv::Mat _controllerImage;
+		cv::Vec3b _currentObs;
 
 };
 
