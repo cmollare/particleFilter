@@ -103,21 +103,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="FilterEnv" -->
+<p>Filter global variables.  
+ <a href="class_filter_env.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_filter_env_8h_source.html">FilterEnv.h</a>&gt;</code></p>
+
 <p><a href="class_filter_env-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2e92bc52ee67eb2ce2cee8e30b3f260"></a><!-- doxytag: member="FilterEnv::getRngSeed" ref="ab2e92bc52ee67eb2ce2cee8e30b3f260" args="()" -->
-boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><b>getRngSeed</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8142c39297358ed5164a7528a14d6188"></a><!-- doxytag: member="FilterEnv::getImageSize" ref="a8142c39297358ed5164a7528a14d6188" args="()" -->
-int *&#160;</td><td class="memItemRight" valign="bottom"><b>getImageSize</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeee8ef430e8982c844edcae6be7adb96"></a><!-- doxytag: member="FilterEnv::FilterEnv" ref="aeee8ef430e8982c844edcae6be7adb96" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#aeee8ef430e8982c844edcae6be7adb96">FilterEnv</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1902174749e76adce6d6ef8dc859b76"></a><!-- doxytag: member="FilterEnv::~FilterEnv" ref="ac1902174749e76adce6d6ef8dc859b76" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#ac1902174749e76adce6d6ef8dc859b76">~FilterEnv</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#adf62de29f0f57ec6efb46e06d10e0f06">getRngSeed</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get random seed.  <a href="#adf62de29f0f57ec6efb46e06d10e0f06"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#a6dc24285e1bb86d302deaefb596cf715">getImageSize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get image size as a 2 dim vector.  <a href="#a6dc24285e1bb86d302deaefb596cf715"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae20ed9b9ba02f5fd744b920ae9ee877"></a><!-- doxytag: member="FilterEnv::_rng" ref="aae20ed9b9ba02f5fd744b920ae9ee877" args="" -->
-boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><b>_rng</b></td></tr>
+boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#aae20ed9b9ba02f5fd744b920ae9ee877">_rng</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer on random seed. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e94830e2e7ab6ffa2aa2004266f3d85"></a><!-- doxytag: member="FilterEnv::_imageSize" ref="a6e94830e2e7ab6ffa2aa2004266f3d85" args="[2]" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_imageSize</b> [2]</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_filter_env.html#a6e94830e2e7ab6ffa2aa2004266f3d85">_imageSize</a> [2]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Image size 2-dim vector : [x, y]. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Filter global variables. </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6dc24285e1bb86d302deaefb596cf715"></a><!-- doxytag: member="FilterEnv::getImageSize" ref="a6dc24285e1bb86d302deaefb596cf715" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * <a class="el" href="class_filter_env.html#a6dc24285e1bb86d302deaefb596cf715">FilterEnv::getImageSize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get image size as a 2 dim vector. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>image size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf62de29f0f57ec6efb46e06d10e0f06"></a><!-- doxytag: member="FilterEnv::getRngSeed" ref="adf62de29f0f57ec6efb46e06d10e0f06" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::random::mt19937 * <a class="el" href="class_filter_env.html#adf62de29f0f57ec6efb46e06d10e0f06">FilterEnv::getRngSeed</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get random seed. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer on random seed </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_filter_env_8h_source.html">FilterEnv.h</a></li>
 <li>src/FilterEnv.cpp</li>
@@ -142,7 +196,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_imageSize</b> [2]</td
     <ul>
       <li class="navelem"><a class="el" href="class_filter_env.html">FilterEnv</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:46:48 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

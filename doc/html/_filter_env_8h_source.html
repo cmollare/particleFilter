@@ -113,30 +113,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor">#include &lt;boost/random.hpp&gt;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="class_filter_env.html">00018</a> <span class="keyword">class </span><a class="code" href="class_filter_env.html">FilterEnv</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020     <span class="keyword">public</span>:
-<a name="l00021"></a>00021         <a class="code" href="class_filter_env.html">FilterEnv</a>();
-<a name="l00022"></a>00022         ~<a class="code" href="class_filter_env.html">FilterEnv</a>();
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024         <span class="keyword">inline</span> boost::random::mt19937* getRngSeed()
-<a name="l00025"></a>00025         {
-<a name="l00026"></a>00026             <span class="keywordflow">return</span> _rng;
-<a name="l00027"></a>00027         }
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029         <span class="keyword">inline</span> <span class="keywordtype">int</span>* getImageSize()
-<a name="l00030"></a>00030         {
-<a name="l00031"></a>00031             <span class="keywordflow">return</span> _imageSize;
-<a name="l00032"></a>00032         }
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034     <span class="keyword">protected</span>:
-<a name="l00035"></a>00035         boost::random::mt19937 *_rng;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037         <span class="keywordtype">int</span> _imageSize[2]; <span class="comment">//[x, y]</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="class_filter_env.html">00023</a> <span class="keyword">class </span><a class="code" href="class_filter_env.html" title="Filter global variables.">FilterEnv</a>
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025     <span class="keyword">public</span>:
+<a name="l00026"></a>00026 
+<a name="l00031"></a>00031         <a class="code" href="class_filter_env.html#aeee8ef430e8982c844edcae6be7adb96" title="Constructor.">FilterEnv</a>();
+<a name="l00032"></a>00032 
+<a name="l00037"></a>00037         <a class="code" href="class_filter_env.html#ac1902174749e76adce6d6ef8dc859b76" title="Destructor.">~FilterEnv</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 };
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#endif // FILTERENV_H</span>
+<a name="l00044"></a><a class="code" href="class_filter_env.html#adf62de29f0f57ec6efb46e06d10e0f06">00044</a>         <span class="keyword">inline</span> boost::random::mt19937* <a class="code" href="class_filter_env.html#adf62de29f0f57ec6efb46e06d10e0f06" title="Get random seed.">getRngSeed</a>()
+<a name="l00045"></a>00045         {
+<a name="l00046"></a>00046             <span class="keywordflow">return</span> <a class="code" href="class_filter_env.html#aae20ed9b9ba02f5fd744b920ae9ee877" title="Pointer on random seed.">_rng</a>;
+<a name="l00047"></a>00047         }
+<a name="l00048"></a>00048 
+<a name="l00054"></a><a class="code" href="class_filter_env.html#a6dc24285e1bb86d302deaefb596cf715">00054</a>         <span class="keyword">inline</span> <span class="keywordtype">int</span>* <a class="code" href="class_filter_env.html#a6dc24285e1bb86d302deaefb596cf715" title="Get image size as a 2 dim vector.">getImageSize</a>()
+<a name="l00055"></a>00055         {
+<a name="l00056"></a>00056             <span class="keywordflow">return</span> <a class="code" href="class_filter_env.html#a6e94830e2e7ab6ffa2aa2004266f3d85" title="Image size 2-dim vector : [x, y].">_imageSize</a>;
+<a name="l00057"></a>00057         }
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keyword">protected</span>:
+<a name="l00060"></a><a class="code" href="class_filter_env.html#aae20ed9b9ba02f5fd744b920ae9ee877">00060</a>                 boost::random::mt19937 *<a class="code" href="class_filter_env.html#aae20ed9b9ba02f5fd744b920ae9ee877" title="Pointer on random seed.">_rng</a>; 
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="class_filter_env.html#a6e94830e2e7ab6ffa2aa2004266f3d85">00062</a>                 <span class="keywordtype">int</span> <a class="code" href="class_filter_env.html#a6e94830e2e7ab6ffa2aa2004266f3d85" title="Image size 2-dim vector : [x, y].">_imageSize</a>[2]; 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#endif // FILTERENV_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -157,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_filter_env_8h.html">FilterEnv.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:46:47 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
