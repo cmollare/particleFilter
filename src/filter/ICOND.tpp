@@ -97,10 +97,10 @@ void ICOND<Particle, Detector, Viewer>::step()
 			else //else sample from detection
 			{
 				this->_vParticles[i]->sampleFromDetector(this->_detector->getDetection());
-				//g = this->_vParticles[i]->evaluateFromDetector();
-				//f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
-				//this->_vLambda[i] = f/g;
-				this->_vLambda[i] = this->_vWeights[i];
+				g = this->_vParticles[i]->evaluateFromDetector();
+				f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
+				this->_vLambda[i] = f/g;
+				//this->_vLambda[i] = this->_vWeights[i];
 				nbImp++;
 			}
 

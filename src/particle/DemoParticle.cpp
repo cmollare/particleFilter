@@ -3,7 +3,7 @@
 DemoParticle::DemoParticle(FilterEnv* pFilterEnv) : _Particle(pFilterEnv)
 {
     _stateVector.resize(2, 0);
-	_varDetector=5;
+	_varDetector=10;
 	_varDynamic=10;
 }
 
@@ -62,7 +62,7 @@ double DemoParticle::evaluateFromDynamic()
 
 double DemoParticle::evaluateFromDetector()
 {
-	return this->evaluateGaussian(_stateVector, _prevDetection, _varDetector*_varDetector);
+	return 1./_varDynamic*this->evaluateGaussian(_stateVector, _prevDetection, _varDetector*_varDetector);
 }
 
 double DemoParticle::evaluateFromPrior()

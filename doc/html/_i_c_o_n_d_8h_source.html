@@ -111,39 +111,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="___filter_8h.html" title="Abstract class for particle filter.">_Filter.h</a>&quot;</span>
 <a name="l00015"></a>00015 
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Particle, <span class="keyword">class</span> Detector, <span class="keyword">class</span> Viewer&gt;
-<a name="l00027"></a><a class="code" href="class_i_c_o_n_d.html">00027</a> <span class="keyword">class </span><a class="code" href="class_i_c_o_n_d.html" title="ICONDensation algorithm.">ICOND</a> : <span class="keyword">public</span> <a class="code" href="class___filter.html" title="Abstract class for particle filter.">_Filter</a>&lt;Particle, Viewer&gt;
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029     <span class="keyword">public</span>:
-<a name="l00037"></a>00037                 <a class="code" href="class_i_c_o_n_d.html#a71d5044e6fadfeeabf4dc090bec61f81" title="Constructor.">ICOND</a>(<span class="keywordtype">int</span> nbParticles, <span class="keywordtype">double</span> q, <span class="keywordtype">double</span> r); <span class="comment">//q = prior percent, r = importance sampling percent, dynamics = 1-q-r</span>
-<a name="l00038"></a>00038 
-<a name="l00050"></a>00050                 <a class="code" href="class_i_c_o_n_d.html#a71d5044e6fadfeeabf4dc090bec61f81" title="Constructor.">ICOND</a>(Detector* detector, <span class="keywordtype">int</span> nbParticles, <span class="keywordtype">double</span> q, <span class="keywordtype">double</span> r);
-<a name="l00051"></a>00051 
-<a name="l00056"></a>00056                 <a class="code" href="class_i_c_o_n_d.html#a26d20c01f07dc9ad6027f80bf604e624" title="Destructor.">~ICOND</a>();
-<a name="l00057"></a>00057 
-<a name="l00065"></a>00065                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9" title="filter initialisation">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
-<a name="l00066"></a>00066 
-<a name="l00079"></a>00079                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
-<a name="l00080"></a>00080 
-<a name="l00090"></a>00090                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation, Viewer&amp; viewer);
-<a name="l00091"></a>00091 
-<a name="l00099"></a>00099                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5" title="update weights of particles">updateWeights</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
-<a name="l00100"></a>00100 
-<a name="l00107"></a>00107                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa" title="update particles">step</a>();
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109     <span class="keyword">protected</span>:
-<a name="l00110"></a><a class="code" href="class_i_c_o_n_d.html#a7ab1284e5e76597a422479151d196194">00110</a>                 <span class="keywordtype">double</span> <a class="code" href="class_i_c_o_n_d.html#a7ab1284e5e76597a422479151d196194" title="Percentage of prior sampling.">_q</a>; 
-<a name="l00111"></a><a class="code" href="class_i_c_o_n_d.html#a0b1d5a8831675784d3393d6b32213d66">00111</a>                 <span class="keywordtype">double</span> <a class="code" href="class_i_c_o_n_d.html#a0b1d5a8831675784d3393d6b32213d66" title="Percentage of importance sampling.">_r</a>; 
-<a name="l00112"></a><a class="code" href="class_i_c_o_n_d.html#a1127cb48dc8b945fa116020b15a50c70">00112</a>                 std::vector&lt;double&gt; <a class="code" href="class_i_c_o_n_d.html#a1127cb48dc8b945fa116020b15a50c70" title="Weight factor.">_vLambda</a>; 
-<a name="l00113"></a><a class="code" href="class_i_c_o_n_d.html#a67108c546dfb3c8562dfec33e865bf03">00113</a>                 Detector* <a class="code" href="class_i_c_o_n_d.html#a67108c546dfb3c8562dfec33e865bf03" title="pointer on detector">_detector</a>; 
-<a name="l00114"></a>00114 
-<a name="l00115"></a><a class="code" href="class_i_c_o_n_d.html#adefff17562c4f940bf5ebed64a962b4e">00115</a>                 <span class="keywordtype">bool</span> <a class="code" href="class_i_c_o_n_d.html#adefff17562c4f940bf5ebed64a962b4e" title="If detector has been allocated in class or outside.">_isDetectorAllocated</a>; 
-<a name="l00116"></a>00116 };
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Particle, <span class="keyword">class</span> Detector, <span class="keyword">class</span> Viewer&gt;
+<a name="l00025"></a><a class="code" href="class_i_c_o_n_d.html">00025</a> <span class="keyword">class </span><a class="code" href="class_i_c_o_n_d.html" title="ICONDensation algorithm.">ICOND</a> : <span class="keyword">public</span> <a class="code" href="class___filter.html" title="Abstract class for particle filter.">_Filter</a>&lt;Particle, Viewer&gt;
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027     <span class="keyword">public</span>:
+<a name="l00035"></a>00035                 <a class="code" href="class_i_c_o_n_d.html#a71d5044e6fadfeeabf4dc090bec61f81" title="Constructor.">ICOND</a>(<span class="keywordtype">int</span> nbParticles, <span class="keywordtype">double</span> q, <span class="keywordtype">double</span> r); <span class="comment">//q = prior percent, r = importance sampling percent, dynamics = 1-q-r</span>
+<a name="l00036"></a>00036 
+<a name="l00048"></a>00048                 <a class="code" href="class_i_c_o_n_d.html#a71d5044e6fadfeeabf4dc090bec61f81" title="Constructor.">ICOND</a>(Detector* detector, <span class="keywordtype">int</span> nbParticles, <span class="keywordtype">double</span> q, <span class="keywordtype">double</span> r);
+<a name="l00049"></a>00049 
+<a name="l00054"></a>00054                 <a class="code" href="class_i_c_o_n_d.html#a26d20c01f07dc9ad6027f80bf604e624" title="Destructor.">~ICOND</a>();
+<a name="l00055"></a>00055 
+<a name="l00063"></a>00063                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9" title="filter initialisation">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
+<a name="l00064"></a>00064 
+<a name="l00077"></a>00077                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
+<a name="l00078"></a>00078 
+<a name="l00088"></a>00088                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation, Viewer&amp; viewer);
+<a name="l00089"></a>00089 
+<a name="l00097"></a>00097                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5" title="update weights of particles">updateWeights</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
+<a name="l00098"></a>00098 
+<a name="l00105"></a>00105                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa" title="update particles">step</a>();
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107     <span class="keyword">protected</span>:
+<a name="l00108"></a><a class="code" href="class_i_c_o_n_d.html#a7ab1284e5e76597a422479151d196194">00108</a>                 <span class="keywordtype">double</span> <a class="code" href="class_i_c_o_n_d.html#a7ab1284e5e76597a422479151d196194" title="Percentage of prior sampling.">_q</a>; 
+<a name="l00109"></a><a class="code" href="class_i_c_o_n_d.html#a0b1d5a8831675784d3393d6b32213d66">00109</a>                 <span class="keywordtype">double</span> <a class="code" href="class_i_c_o_n_d.html#a0b1d5a8831675784d3393d6b32213d66" title="Percentage of importance sampling.">_r</a>; 
+<a name="l00110"></a><a class="code" href="class_i_c_o_n_d.html#a1127cb48dc8b945fa116020b15a50c70">00110</a>                 std::vector&lt;double&gt; <a class="code" href="class_i_c_o_n_d.html#a1127cb48dc8b945fa116020b15a50c70" title="Weight factor.">_vLambda</a>; 
+<a name="l00111"></a><a class="code" href="class_i_c_o_n_d.html#a67108c546dfb3c8562dfec33e865bf03">00111</a>                 Detector* <a class="code" href="class_i_c_o_n_d.html#a67108c546dfb3c8562dfec33e865bf03" title="pointer on detector">_detector</a>; 
+<a name="l00112"></a>00112 
+<a name="l00113"></a><a class="code" href="class_i_c_o_n_d.html#adefff17562c4f940bf5ebed64a962b4e">00113</a>                 <span class="keywordtype">bool</span> <a class="code" href="class_i_c_o_n_d.html#adefff17562c4f940bf5ebed64a962b4e" title="If detector has been allocated in class or outside.">_isDetectorAllocated</a>; 
+<a name="l00114"></a>00114 };
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="preprocessor">#include &quot;ICOND.tpp&quot;</span>
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="preprocessor">#include &quot;ICOND.tpp&quot;</span>
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 <span class="preprocessor">#endif // ICOND_H</span>
+<a name="l00118"></a>00118 <span class="preprocessor">#endif // ICOND_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_i_c_o_n_d_8h.html">ICOND.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 17:46:47 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 18:25:10 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

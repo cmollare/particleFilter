@@ -18,9 +18,7 @@
 //! \brief ICONDensation algorithm
 //!
 //! This implementation is inspired from the paper or Isard and al.\n
-//! "unifying low-level and high-level tracking in a stochastic framework"\n
-//! ----WARNING----\n
-//! --this filter have not a proper implementation of importance sampling--\n
+//! "unifying low-level and high-level tracking in a stochastic framework"\nn
 //!
 
 template<class Particle, class Detector, class Viewer>
