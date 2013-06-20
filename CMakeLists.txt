@@ -52,7 +52,5 @@ target_link_libraries(
 		${OpenCV_LIBS}
 	#libs de boost
                 boost_random
-		boost_filesystem
 		boost_system
-                boost_thread
 )
