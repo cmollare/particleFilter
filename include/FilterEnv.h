@@ -1,3 +1,14 @@
+//!
+//! \file FilterEnv.h
+//! \brief Class to encapsulate global variables
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! For now, it only encapsulates the random seed.
+//! It has to be used more.
+//!
+
+
 #ifndef FILTERENV_H
 #define FILTERENV_H
 

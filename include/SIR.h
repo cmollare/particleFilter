@@ -1,3 +1,15 @@
+//!
+//! \file SIR.h
+//! \brief ICondensation particle filter
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! This implementation is inspired from the paper or Isard and al.
+//! "conditionnal density propagation for visual tracking"
+//! It is actually the Condensation version of the SIR algorithm.
+//!
+
+
 #ifndef SIR_H
 #define SIR_H
 

@@ -1,3 +1,12 @@
+//!
+//! \file DemoViewer.h
+//! \brief Demonstration class for viewer implementation
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! Demonstration of how a viewer could be used.
+//!
+
 #ifndef DEMOVIEWER_H
 #define DEMOVIEWER_H
 

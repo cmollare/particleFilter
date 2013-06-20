@@ -1,3 +1,11 @@
+//!
+//! \file _Detector.h
+//! \brief Abstract class for detector
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+
+
 #ifndef _DETECTOR_H
 #define _DETECTOR_H
 

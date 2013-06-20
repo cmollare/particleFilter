@@ -1,3 +1,12 @@
+//!
+//! \file _Observation.h
+//! \brief Abstract class for observation model
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! If you have to implement a new observation model, derive this class
+//!
+
 #ifndef _OBSERVATION_H
 #define _OBSERVATION_H
 

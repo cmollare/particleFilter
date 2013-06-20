@@ -1,3 +1,12 @@
+//!
+//! \file _Particle.h
+//! \brief Abstract class for particle (state vector)
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! To create your own particle, derive this class
+//!
+
 #ifndef PARTICLE_H
 #define PARTICLE_H
 

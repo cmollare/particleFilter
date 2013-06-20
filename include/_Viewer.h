@@ -1,3 +1,12 @@
+//!
+//! \file _Viewer.h
+//! \brief Abstract class for viewer
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! If you have to implement a new filter, derive this class
+//!
+
 #ifndef _VIEWER_H
 #define _VIEWER_H
 

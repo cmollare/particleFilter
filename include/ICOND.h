@@ -1,3 +1,13 @@
+//!
+//! \file ICOND.h
+//! \brief ICondensation particle filter
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! This implementation is inspired from the paper or Isard and al.
+//! "unifying low-level and high-level tracking in a stochastic framework"
+//!
+
 #ifndef ICOND_H
 #define ICOND_H
 

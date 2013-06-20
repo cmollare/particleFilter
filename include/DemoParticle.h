@@ -1,3 +1,15 @@
+//!
+//! \file DemoParticle.h
+//! \brief Demonstration class for particle implementation
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! This class shows how to implement a particle.
+//! The state vector is [u, v], the position in an image.
+//! The dynamic is a random walk and the prior low is uniform in the image.
+//!
+
+
 #ifndef DEMOPARTICLE_H
 #define DEMOPARTICLE_H
 

@@ -1,3 +1,13 @@
+//!
+//! \file MouseDetector.h
+//! \brief Detect the mouse position
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//! This detector return the position of the mouse in the specified window.
+//! To detect, you have to hold the "ctrl" key when moving the mouse.
+//!
+
 #ifndef MOUSEDETECTOR_H
 #define MOUSEDETECTOR_H
 

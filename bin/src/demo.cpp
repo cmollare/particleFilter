@@ -1,3 +1,14 @@
+//!
+//! \file demo.cpp
+//! \brief Demo programm for particle filter
+//! \author Christophe Mollaret
+//! \date June 2013
+//!
+//!
+//! This programm show how to use particle filter SIR and ICOND with a viewer, a detector and an observation model
+//!
+
+
 #include "SIR.h"
 #include "ICOND.h"
 #include "DemoObs.h"
