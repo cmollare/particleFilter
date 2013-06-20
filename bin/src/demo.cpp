@@ -43,7 +43,7 @@ int main()
 	MouseDetector mouseDet("ICOND");
 
 	SIR<DemoParticle, DemoViewer> filterSIR(500);
-	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(&mouseDet, 500, 0.001, 0.5);
+	ICOND<DemoParticle, MouseDetector, DemoViewer> filter(&mouseDet, 500, 0.1, 0.2);
 	filter.init(obs);
 	filterSIR.init(obs);
 

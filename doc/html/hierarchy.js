@@ -13,10 +13,10 @@ var hierarchy =
     [ "_Particle", "class___particle.html", [
       [ "DemoParticle", "class_demo_particle.html", null ]
     ] ],
-    [ "FilterEnv", "class_filter_env.html", null ],
-    [ "MouseEvent", "struct_mouse_event.html", null ],
-    [ "Viewer< Particle >", "class_viewer.html", null ],
-    [ "Viewer< DemoParticle >", "class_viewer.html", [
+    [ "_Viewer< Particle >", "class___viewer.html", null ],
+    [ "_Viewer< DemoParticle >", "class___viewer.html", [
       [ "DemoViewer", "class_demo_viewer.html", null ]
-    ] ]
+    ] ],
+    [ "FilterEnv", "class_filter_env.html", null ],
+    [ "MouseEvent", "struct_mouse_event.html", null ]
 ];

@@ -112,31 +112,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="___observation_8h.html" title="Abstract class for observation model.">_Observation.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="class_demo_obs.html">00017</a> <span class="keyword">class </span><a class="code" href="class_demo_obs.html">DemoObs</a> : <span class="keyword">public</span> <a class="code" href="class___observation.html">_Observation</a>
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019     <span class="keyword">public</span>:
-<a name="l00020"></a>00020                 <a class="code" href="class_demo_obs.html">DemoObs</a>(cv::Mat&amp; firstObs, cv::Vec3b colorModel);
-<a name="l00021"></a>00021         ~<a class="code" href="class_demo_obs.html">DemoObs</a>();
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">double</span> computeLikelihood(<a class="code" href="class___particle.html">_Particle</a>&amp; particle);
-<a name="l00024"></a>00024         <span class="keywordtype">void</span> update(cv::Mat&amp; newObs);
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class_demo_obs.html">00022</a> <span class="keyword">class </span><a class="code" href="class_demo_obs.html" title="Example class for observation model.">DemoObs</a> : <span class="keyword">public</span> <a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     <span class="keyword">public</span>:
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026                 <span class="keyword">inline</span> <span class="keywordtype">void</span> setColorModel(cv::Vec3b cm)
-<a name="l00027"></a>00027                 {
-<a name="l00028"></a>00028                         _colorModel = cm;
-<a name="l00029"></a>00029                 }
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031                 <span class="keyword">inline</span> cv::Mat&amp; getCurrentObs()
-<a name="l00032"></a>00032                 {
-<a name="l00033"></a>00033                         <span class="keywordflow">return</span> _obs;
-<a name="l00034"></a>00034                 }
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036     <span class="keyword">protected</span>:
-<a name="l00037"></a>00037         cv::Mat _obs;
-<a name="l00038"></a>00038                 cv::Vec3b _colorModel;
-<a name="l00039"></a>00039 };
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#endif</span>
+<a name="l00032"></a>00032                 <a class="code" href="class_demo_obs.html#ae3cfe8b4b1d9525ab1e226bc3d065db1" title="Constructor.">DemoObs</a>(cv::Mat&amp; firstObs, cv::Vec3b colorModel);
+<a name="l00033"></a>00033 
+<a name="l00038"></a>00038                 <a class="code" href="class_demo_obs.html#a9b35bc44e8dd56a2bdde8fdd2222d451" title="Destructor.">~DemoObs</a>();
+<a name="l00039"></a>00039 
+<a name="l00048"></a>00048         <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_demo_obs.html#a7cdcac7e35f0973a3529931e55b2ee96" title="Compute likelihood.">computeLikelihood</a>(<a class="code" href="class___particle.html" title="Abstract class for particles.">_Particle</a>&amp; particle);
+<a name="l00049"></a>00049 
+<a name="l00055"></a>00055                 <span class="keywordtype">void</span> <a class="code" href="class_demo_obs.html#ae8a6e16104f9d5ab9fa3a947a1cb6400" title="Update image.">update</a>(cv::Mat&amp; newObs);
+<a name="l00056"></a>00056 
+<a name="l00062"></a><a class="code" href="class_demo_obs.html#a57966c1a35cd623b23a11f0c9576c3e8">00062</a>                 <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_obs.html#a57966c1a35cd623b23a11f0c9576c3e8" title="Change the color to track.">setColorModel</a>(cv::Vec3b cm)
+<a name="l00063"></a>00063                 {
+<a name="l00064"></a>00064                         <a class="code" href="class_demo_obs.html#a69758e3aee3c2015b266044f5133bf28" title="Current color model.">_colorModel</a> = cm;
+<a name="l00065"></a>00065                 }
+<a name="l00066"></a>00066 
+<a name="l00072"></a><a class="code" href="class_demo_obs.html#a35a0c7432b346cfccce3eb3e8b670ea8">00072</a>                 <span class="keyword">inline</span> cv::Mat&amp; <a class="code" href="class_demo_obs.html#a35a0c7432b346cfccce3eb3e8b670ea8" title="Get current image.">getCurrentObs</a>()
+<a name="l00073"></a>00073                 {
+<a name="l00074"></a>00074                         <span class="keywordflow">return</span> <a class="code" href="class_demo_obs.html#aedce02f8454a265dacf0073d7de71f27" title="Current image.">_obs</a>;
+<a name="l00075"></a>00075                 }
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077     <span class="keyword">protected</span>:
+<a name="l00078"></a><a class="code" href="class_demo_obs.html#aedce02f8454a265dacf0073d7de71f27">00078</a>                 cv::Mat <a class="code" href="class_demo_obs.html#aedce02f8454a265dacf0073d7de71f27" title="Current image.">_obs</a>; 
+<a name="l00079"></a><a class="code" href="class_demo_obs.html#a69758e3aee3c2015b266044f5133bf28">00079</a>                 cv::Vec3b <a class="code" href="class_demo_obs.html#a69758e3aee3c2015b266044f5133bf28" title="Current color model.">_colorModel</a>; 
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -157,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_demo_obs_8h.html">DemoObs.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

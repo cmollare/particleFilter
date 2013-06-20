@@ -101,7 +101,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SIR&lt; Particle, Viewer &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="SIR" --><!-- doxytag: inherits="_Filter" --><div class="dynheader">
+<!-- doxytag: class="SIR" --><!-- doxytag: inherits="_Filter" -->
+<p><a class="el" href="class_s_i_r.html" title="SIR algorithm.">SIR</a> algorithm.  
+ <a href="class_s_i_r.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_s_i_r_8h_source.html">SIR.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for SIR&lt; Particle, Viewer &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_i_r__inherit__graph.png" border="0" usemap="#_s_i_r_3_01_particle_00_01_viewer_01_4_inherit__map" alt="Inheritance graph"/></div>
@@ -120,29 +125,63 @@ Collaboration diagram for SIR&lt; Particle, Viewer &gt;:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1638d662725aa9caccb998b314e56612"></a><!-- doxytag: member="SIR::SIR" ref="a1638d662725aa9caccb998b314e56612" args="(int nbParticles)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>SIR</b> (int nbParticles)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a69e9d6b03457d5968cf9b4f263a236a6">init</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">filter initialisation  <a href="#a69e9d6b03457d5968cf9b4f263a236a6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#aa79a7467ceb89713c14407d67e7ac0a0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a5e33bc5a3fde128e88a35f712adb711d">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation, <a class="el" href="class_viewer.html">Viewer</a> &amp;viewer)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#a5e33bc5a3fde128e88a35f712adb711d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a64afc078893eceef31ff6eb067b525eb">step</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update particles  <a href="#a64afc078893eceef31ff6eb067b525eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a1638d662725aa9caccb998b314e56612">SIR</a> (int nbParticles)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1638d662725aa9caccb998b314e56612"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54f0fee54da60e3b313dfd907cbe1980"></a><!-- doxytag: member="SIR::~SIR" ref="a54f0fee54da60e3b313dfd907cbe1980" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a54f0fee54da60e3b313dfd907cbe1980">~SIR</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#af9c10211b8bf89846b1692eb3fdf5cd4">init</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">filter initialisation  <a href="#af9c10211b8bf89846b1692eb3fdf5cd4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#a4544ae41ab02eb7c9ec8c3c9ae188a90"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a61d1b373648c75e3c0043c3418dd7a57">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation, Viewer &amp;viewer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#a61d1b373648c75e3c0043c3418dd7a57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_r.html#a7093692612f88723e78ee73e2ed78c2e">step</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update particles  <a href="#a7093692612f88723e78ee73e2ed78c2e"></a><br/></td></tr>
 </table>
-<h3>template&lt;class Particle, class Viewer&gt;<br/>
- class SIR&lt; Particle, Viewer &gt;</h3>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class Particle, class Viewer&gt;<br/>
+class SIR&lt; Particle, Viewer &gt;</h3>
 
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a69e9d6b03457d5968cf9b4f263a236a6"></a><!-- doxytag: member="SIR::init" ref="a69e9d6b03457d5968cf9b4f263a236a6" args="(_Observation &amp;observation)" -->
+<p><a class="el" href="class_s_i_r.html" title="SIR algorithm.">SIR</a> algorithm. </p>
+<p>This implementation is inspired from the paper or Isard and al. "conditionnal density propagation for visual tracking" It is actually the Condensation version of the <a class="el" href="class_s_i_r.html" title="SIR algorithm.">SIR</a> algorithm. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1638d662725aa9caccb998b314e56612"></a><!-- doxytag: member="SIR::SIR" ref="a1638d662725aa9caccb998b314e56612" args="(int nbParticles)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Particle, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_s_i_r.html#a69e9d6b03457d5968cf9b4f263a236a6">init</a> </td>
+          <td class="memname"><a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, Viewer &gt;::<a class="el" href="class_s_i_r.html">SIR</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbParticles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbParticles</td><td>Number of particles used during filtering </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af9c10211b8bf89846b1692eb3fdf5cd4"></a><!-- doxytag: member="SIR::init" ref="af9c10211b8bf89846b1692eb3fdf5cd4" args="(_Observation &amp;observation)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Particle, class Viewer&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, Viewer &gt;::<a class="el" href="class_s_i_r.html#af9c10211b8bf89846b1692eb3fdf5cd4">init</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em></td><td>)</td>
@@ -159,20 +198,20 @@ template&lt;class Particle, class Viewer&gt; </div>
   </table>
   </dd>
 </dl>
-<p>Init weights and particles. </p>
+<p>Call init from <a class="el" href="class___filter.html" title="Abstract class for particle filter.">_Filter</a> class and initiate detector, sample particles from prior law. </p>
 
 <p>Reimplemented from <a class="el" href="class___filter.html#acc2f1e469436aead66277ba5ab4edcc8">_Filter&lt; Particle, Viewer &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a64afc078893eceef31ff6eb067b525eb"></a><!-- doxytag: member="SIR::step" ref="a64afc078893eceef31ff6eb067b525eb" args="()" -->
+<a class="anchor" id="a7093692612f88723e78ee73e2ed78c2e"></a><!-- doxytag: member="SIR::step" ref="a7093692612f88723e78ee73e2ed78c2e" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Particle, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_s_i_r.html#a64afc078893eceef31ff6eb067b525eb">step</a> </td>
+          <td class="memname">void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, Viewer &gt;::<a class="el" href="class_s_i_r.html#a7093692612f88723e78ee73e2ed78c2e">step</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -182,20 +221,20 @@ template&lt;class Particle, class Viewer&gt; </div>
 <div class="memdoc">
 
 <p>update particles </p>
-<p>Abstract class meant to sample particles' next state. </p>
+<p>Sample new particles from dynamic. </p>
 
 <p>Implements <a class="el" href="class___filter.html#a5d96caec5b7492ffae8e2c4e5b660134">_Filter&lt; Particle, Viewer &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa79a7467ceb89713c14407d67e7ac0a0"></a><!-- doxytag: member="SIR::update" ref="aa79a7467ceb89713c14407d67e7ac0a0" args="(_Observation &amp;observation)" -->
+<a class="anchor" id="a4544ae41ab02eb7c9ec8c3c9ae188a90"></a><!-- doxytag: member="SIR::update" ref="a4544ae41ab02eb7c9ec8c3c9ae188a90" args="(_Observation &amp;observation)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Particle, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0">update</a> </td>
+          <td class="memname">void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, Viewer &gt;::<a class="el" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90">update</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em></td><td>)</td>
@@ -212,20 +251,27 @@ template&lt;class Particle, class Viewer&gt; </div>
   </table>
   </dd>
 </dl>
-<p>Abstract function to implement in derived class. This function is meant to update filter's state. </p>
+<p>Call functions :</p>
+<ul>
+<li><a class="el" href="class_s_i_r.html#a7093692612f88723e78ee73e2ed78c2e" title="update particles">step()</a></li>
+<li><a class="el" href="class___filter.html#a1f06cb348d64c4d773a7dd908967b9bd" title="update weights of particles">updateWeights()</a></li>
+<li><a class="el" href="class___filter.html#a1074409959074d40349cdd9fbd1ab96b" title="Compute Neff.">calcNeff()</a></li>
+<li><a class="el" href="class___filter.html#a3458adc90d2b0cbda0a2f0951bcec6cd" title="Compute filter MMSE estimate.">computeMMSE()</a></li>
+<li><a class="el" href="class___filter.html#aba33334c8c4c115f0f3dd4f0b2f286f7" title="resampling function">resample()</a> (if needed) </li>
+</ul>
 
 <p>Implements <a class="el" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521">_Filter&lt; Particle, Viewer &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5e33bc5a3fde128e88a35f712adb711d"></a><!-- doxytag: member="SIR::update" ref="a5e33bc5a3fde128e88a35f712adb711d" args="(_Observation &amp;observation, Viewer &amp;viewer)" -->
+<a class="anchor" id="a61d1b373648c75e3c0043c3418dd7a57"></a><!-- doxytag: member="SIR::update" ref="a61d1b373648c75e3c0043c3418dd7a57" args="(_Observation &amp;observation, Viewer &amp;viewer)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Particle, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0">update</a> </td>
+          <td class="memname">void <a class="el" href="class_s_i_r.html">SIR</a>&lt; Particle, Viewer &gt;::<a class="el" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90">update</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em>, </td>
@@ -233,7 +279,7 @@ template&lt;class Particle, class Viewer&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_viewer.html">Viewer</a> &amp;&#160;</td>
+          <td class="paramtype">Viewer &amp;&#160;</td>
           <td class="paramname"><em>viewer</em>&#160;</td>
         </tr>
         <tr>
@@ -253,7 +299,7 @@ template&lt;class Particle, class Viewer&gt; </div>
   </table>
   </dd>
 </dl>
-<p>It's mainly the same function as virtual void <a class="el" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0" title="update of filter&#39;s state">update(_Observation&amp; observation)</a>=0, but meant to include observation class if you need to see something. </p>
+<p>It's mainly the same function as virtual void <a class="el" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90" title="update of filter&#39;s state">update(_Observation&amp; observation)</a> Call viewer functions </p>
 
 <p>Implements <a class="el" href="class___filter.html#acb708f06eb7811ada7b8cb7ba51a644d">_Filter&lt; Particle, Viewer &gt;</a>.</p>
 
@@ -282,7 +328,7 @@ template&lt;class Particle, class Viewer&gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="class_s_i_r.html">SIR</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

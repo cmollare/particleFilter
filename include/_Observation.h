@@ -12,12 +12,34 @@
 
 #include "_Particle.h"
 
+
+//!
+//! \class _Observation
+//! \brief Abstract class for observation model
+//!
+
 class _Observation
 {
     public:
+
+		//!
+		//! \fn _Observation()
+		//! \brief Constructor
+		//!
         _Observation();
+
+		//!
+		//! \fn ~_Observation()
+		//! \brief Destructor
+		//!
         ~_Observation();
 
+		//!
+		//! \fn virtual double computeLikelihood(_Particle& particle)=0
+		//! \brief Function to compute particle likelihood
+		//! \param particle Particle to compute likelihood from
+		//! \return Likelihood value
+		//!
 		virtual double computeLikelihood(_Particle& particle)=0;
 };
 

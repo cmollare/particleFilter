@@ -14,7 +14,7 @@
 #include "_Viewer.h"
 #include "DemoParticle.h"
 
-class DemoViewer : public Viewer<DemoParticle>
+class DemoViewer : public _Viewer<DemoParticle>
 {
     public:
 		DemoViewer(std::string outputName);

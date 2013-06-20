@@ -102,7 +102,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">_Detector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="_Detector" --><div class="dynheader">
+<!-- doxytag: class="_Detector" -->
+<p>Abstract class for detector.  
+ <a href="class___detector.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="___detector_8h_source.html">_Detector.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for _Detector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class___detector__inherit__graph.png" border="0" usemap="#___detector_inherit__map" alt="Inheritance graph"/></div>
@@ -114,21 +119,124 @@ Inheritance diagram for _Detector:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade1641a197ea23a8e7ef2f98b1592aaf"></a><!-- doxytag: member="_Detector::init" ref="ade1641a197ea23a8e7ef2f98b1592aaf" args="(_Observation &amp;obs)=0" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d267c3242e74f0b19c7164f9735244d"></a><!-- doxytag: member="_Detector::detect" ref="a3d267c3242e74f0b19c7164f9735244d" args="(_Observation &amp;obs)=0" -->
-virtual std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>detect</b> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08ca9aa3e6a1d05bf7d6886834877748"></a><!-- doxytag: member="_Detector::getDetection" ref="a08ca9aa3e6a1d05bf7d6886834877748" args="()" -->
-std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDetection</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a333d8c31b7364f32e135b04b50eeac1a"></a><!-- doxytag: member="_Detector::isDetected" ref="a333d8c31b7364f32e135b04b50eeac1a" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDetected</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65204a94b937a4d2036d9b125d95db4d"></a><!-- doxytag: member="_Detector::_Detector" ref="a65204a94b937a4d2036d9b125d95db4d" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a65204a94b937a4d2036d9b125d95db4d">_Detector</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a88b6d10baba871d26ff7123621993169">init</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector initialisation.  <a href="#a88b6d10baba871d26ff7123621993169"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#ae7eacac2105058c66c3e6d8d949effd2">detect</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process detection.  <a href="#ae7eacac2105058c66c3e6d8d949effd2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a77b20a718478cfae6e87468dffe2c8d4">getDetection</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a77b20a718478cfae6e87468dffe2c8d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a333d8c31b7364f32e135b04b50eeac1a">isDetected</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if there was a detection.  <a href="#a333d8c31b7364f32e135b04b50eeac1a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a9ce5630d98b99fbcbcfca7d44100b3"></a><!-- doxytag: member="_Detector::_currentDetection" ref="a6a9ce5630d98b99fbcbcfca7d44100b3" args="" -->
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_currentDetection</b></td></tr>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a6a9ce5630d98b99fbcbcfca7d44100b3">_currentDetection</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">detection state vector <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc61d037692c2e312df032d8fb05f9f"></a><!-- doxytag: member="_Detector::_isDetected" ref="a6dc61d037692c2e312df032d8fb05f9f" args="" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_isDetected</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___detector.html#a6dc61d037692c2e312df032d8fb05f9f">_isDetected</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True if something is currently detected. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Abstract class for detector. </p>
+<p>Has to be reimplemented if detector is needed </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ae7eacac2105058c66c3e6d8d949effd2"></a><!-- doxytag: member="_Detector::detect" ref="ae7eacac2105058c66c3e6d8d949effd2" args="(_Observation &amp;obs)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; &amp; <a class="el" href="class___detector.html#ae7eacac2105058c66c3e6d8d949effd2">_Detector::detect</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
+          <td class="paramname"><em>obs</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Process detection. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obs</td><td>Observation model </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>return _currenDetection (state vector of detection) </dd></dl>
+
+<p>Implemented in <a class="el" href="class_mouse_detector.html#a145e8ce7950a13d5ea40546258daa674">MouseDetector</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77b20a718478cfae6e87468dffe2c8d4"></a><!-- doxytag: member="_Detector::getDetection" ref="a77b20a718478cfae6e87468dffe2c8d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; &amp; <a class="el" href="class___detector.html#a77b20a718478cfae6e87468dffe2c8d4">_Detector::getDetection</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Getter. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>_currentDetection, state vector of detection </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a88b6d10baba871d26ff7123621993169"></a><!-- doxytag: member="_Detector::init" ref="a88b6d10baba871d26ff7123621993169" args="(_Observation &amp;obs)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class___detector.html#a88b6d10baba871d26ff7123621993169">_Detector::init</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
+          <td class="paramname"><em>obs</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Detector initialisation. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obs</td><td>Observation model</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Pure virtual function </p>
+
+<p>Implemented in <a class="el" href="class_mouse_detector.html#ac998b07903aed7974ecaea0522b8402a">MouseDetector</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a333d8c31b7364f32e135b04b50eeac1a"></a><!-- doxytag: member="_Detector::isDetected" ref="a333d8c31b7364f32e135b04b50eeac1a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class___detector.html#a333d8c31b7364f32e135b04b50eeac1a">_Detector::isDetected</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test if there was a detection. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if something was detected, else, return false </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="___detector_8h_source.html">_Detector.h</a></li>
 <li>src/detector/_Detector.cpp</li>
@@ -153,7 +261,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_isDetected</b></td><
     <ul>
       <li class="navelem"><a class="el" href="class___detector.html">_Detector</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

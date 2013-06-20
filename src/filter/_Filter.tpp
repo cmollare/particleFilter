@@ -6,6 +6,7 @@ _Filter<Particle, Viewer>::_Filter(int nbParticles) : _nbParticles(nbParticles)
 	this->_Ns=nbParticles/4;
 
 	_pFilterEnv = new FilterEnv;
+	_rng = _pFilterEnv->getRngSeed();
 
 	//Particles allocation
 	this->_vParticles.resize(this->_nbParticles, NULL);
@@ -60,7 +61,7 @@ void _Filter<Particle, Viewer>::resample()
 {
 	double invNbPart = 1./this->_nbParticles;
 	boost::random::uniform_real_distribution<double> unif(0, invNbPart);
-	double u = unif(_rng);
+	double u = unif(*_rng);
 
 	int i=0;
 	for (int j=0 ; j<this->_nbParticles ; j++)

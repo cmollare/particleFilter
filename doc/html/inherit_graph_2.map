@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class___observation.html" title="_Observation" alt="" coords="5,5,104,35"/>
-<area shape="rect" id="node3" href="$class_demo_obs.html" title="DemoObs" alt="" coords="153,5,233,35"/>
+<area shape="rect" id="node1" href="$class___observation.html" title="Abstract class for observation model." alt="" coords="5,5,104,35"/>
+<area shape="rect" id="node3" href="$class_demo_obs.html" title="Example class for observation model." alt="" coords="153,5,233,35"/>
 </map>

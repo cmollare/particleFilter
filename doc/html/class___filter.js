@@ -19,6 +19,7 @@ var class___filter =
     [ "_Neff", "class___filter.html#a8ee17051413b35b3d3a003d5d3507d4b", null ],
     [ "_Ns", "class___filter.html#a9e0fc1859f1c88924ed959855434feb9", null ],
     [ "_pFilterEnv", "class___filter.html#a249afc45de8c827cee2e33d857ffc54f", null ],
+    [ "_rng", "class___filter.html#a889f8839a43cf75a35952d2591cc371a", null ],
     [ "_vParticles", "class___filter.html#ae3477bd905588d25aac721b05c5ce6e1", null ],
     [ "_vWeights", "class___filter.html#a1017cfae550e105512260f72a7304b52", null ],
     [ "_weightNorm", "class___filter.html#a6b5dc2b48de36e5fb9cea1261506e3db", null ]

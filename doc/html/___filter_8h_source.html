@@ -124,15 +124,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00037"></a>00037 
 <a name="l00042"></a>00042                 <a class="code" href="class___filter.html#a835c5b5c329a15bb0f0cdd8ced43107f" title="Destructor.">~_Filter</a>();
 <a name="l00043"></a>00043 
-<a name="l00051"></a>00051                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#acc2f1e469436aead66277ba5ab4edcc8" title="filter initialisation">init</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation);
+<a name="l00051"></a>00051                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#acc2f1e469436aead66277ba5ab4edcc8" title="filter initialisation">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
 <a name="l00052"></a>00052 
-<a name="l00060"></a>00060                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation)=0;
+<a name="l00060"></a>00060                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation)=0;
 <a name="l00061"></a>00061 
-<a name="l00070"></a>00070                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation, <a class="code" href="class_viewer.html">Viewer</a>&amp; viewer)=0;
+<a name="l00070"></a>00070                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation, Viewer&amp; viewer)=0;
 <a name="l00071"></a>00071 
 <a name="l00078"></a>00078                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a5d96caec5b7492ffae8e2c4e5b660134" title="update particles">step</a>()=0;
 <a name="l00079"></a>00079 
-<a name="l00087"></a>00087                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a1f06cb348d64c4d773a7dd908967b9bd" title="update weights of particles">updateWeights</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation);
+<a name="l00087"></a>00087                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#a1f06cb348d64c4d773a7dd908967b9bd" title="update weights of particles">updateWeights</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
 <a name="l00088"></a>00088 
 <a name="l00095"></a>00095                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___filter.html#aba33334c8c4c115f0f3dd4f0b2f286f7" title="resampling function">resample</a>();
 <a name="l00096"></a>00096 
@@ -168,11 +168,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00154"></a>00154 
 <a name="l00155"></a><a class="code" href="class___filter.html#a8ee17051413b35b3d3a003d5d3507d4b">00155</a>                 <span class="keywordtype">double</span> <a class="code" href="class___filter.html#a8ee17051413b35b3d3a003d5d3507d4b" title="Number of efficient particles.">_Neff</a>; 
 <a name="l00156"></a><a class="code" href="class___filter.html#a9e0fc1859f1c88924ed959855434feb9">00156</a>                 <span class="keywordtype">double</span> <a class="code" href="class___filter.html#a9e0fc1859f1c88924ed959855434feb9" title="Threshold to launch resampling.">_Ns</a>; 
-<a name="l00157"></a>00157 };
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="preprocessor">#include &quot;_Filter.tpp&quot;</span>
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158                 boost::random::mt19937* _rng;
+<a name="l00159"></a>00159 };
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161 <span class="preprocessor">#endif</span>
+<a name="l00161"></a>00161 <span class="preprocessor">#include &quot;_Filter.tpp&quot;</span>
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -193,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="___filter_8h.html">_Filter.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

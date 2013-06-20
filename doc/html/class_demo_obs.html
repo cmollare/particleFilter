@@ -102,42 +102,199 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DemoObs Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="DemoObs" --><!-- doxytag: inherits="_Observation" --><div class="dynheader">
+<!-- doxytag: class="DemoObs" --><!-- doxytag: inherits="_Observation" -->
+<p>Example class for observation model.  
+ <a href="class_demo_obs.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_demo_obs_8h_source.html">DemoObs.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for DemoObs:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_demo_obs__inherit__graph.png" border="0" usemap="#_demo_obs_inherit__map" alt="Inheritance graph"/></div>
 <map name="_demo_obs_inherit__map" id="_demo_obs_inherit__map">
-<area shape="rect" id="node2" href="class___observation.html" title="_Observation" alt="" coords="5,5,104,35"/></map>
+<area shape="rect" id="node2" href="class___observation.html" title="Abstract class for observation model." alt="" coords="5,5,104,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for DemoObs:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_demo_obs__coll__graph.png" border="0" usemap="#_demo_obs_coll__map" alt="Collaboration graph"/></div>
 <map name="_demo_obs_coll__map" id="_demo_obs_coll__map">
-<area shape="rect" id="node2" href="class___observation.html" title="_Observation" alt="" coords="5,5,104,35"/></map>
+<area shape="rect" id="node2" href="class___observation.html" title="Abstract class for observation model." alt="" coords="5,5,104,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_demo_obs-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3cfe8b4b1d9525ab1e226bc3d065db1"></a><!-- doxytag: member="DemoObs::DemoObs" ref="ae3cfe8b4b1d9525ab1e226bc3d065db1" args="(cv::Mat &amp;firstObs, cv::Vec3b colorModel)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>DemoObs</b> (cv::Mat &amp;firstObs, cv::Vec3b colorModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cdcac7e35f0973a3529931e55b2ee96"></a><!-- doxytag: member="DemoObs::computeLikelihood" ref="a7cdcac7e35f0973a3529931e55b2ee96" args="(_Particle &amp;particle)" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>computeLikelihood</b> (<a class="el" href="class___particle.html">_Particle</a> &amp;particle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8a6e16104f9d5ab9fa3a947a1cb6400"></a><!-- doxytag: member="DemoObs::update" ref="ae8a6e16104f9d5ab9fa3a947a1cb6400" args="(cv::Mat &amp;newObs)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (cv::Mat &amp;newObs)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57966c1a35cd623b23a11f0c9576c3e8"></a><!-- doxytag: member="DemoObs::setColorModel" ref="a57966c1a35cd623b23a11f0c9576c3e8" args="(cv::Vec3b cm)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorModel</b> (cv::Vec3b cm)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae94a0c4fc8728e7201b72f527459a3f"></a><!-- doxytag: member="DemoObs::getCurrentObs" ref="aae94a0c4fc8728e7201b72f527459a3f" args="()" -->
-cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentObs</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#ae3cfe8b4b1d9525ab1e226bc3d065db1">DemoObs</a> (cv::Mat &amp;firstObs, cv::Vec3b colorModel)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae3cfe8b4b1d9525ab1e226bc3d065db1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b35bc44e8dd56a2bdde8fdd2222d451"></a><!-- doxytag: member="DemoObs::~DemoObs" ref="a9b35bc44e8dd56a2bdde8fdd2222d451" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#a9b35bc44e8dd56a2bdde8fdd2222d451">~DemoObs</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#a7cdcac7e35f0973a3529931e55b2ee96">computeLikelihood</a> (<a class="el" href="class___particle.html">_Particle</a> &amp;particle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute likelihood.  <a href="#a7cdcac7e35f0973a3529931e55b2ee96"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#ae8a6e16104f9d5ab9fa3a947a1cb6400">update</a> (cv::Mat &amp;newObs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update image.  <a href="#ae8a6e16104f9d5ab9fa3a947a1cb6400"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#a57966c1a35cd623b23a11f0c9576c3e8">setColorModel</a> (cv::Vec3b cm)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the color to track.  <a href="#a57966c1a35cd623b23a11f0c9576c3e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#a35a0c7432b346cfccce3eb3e8b670ea8">getCurrentObs</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current image.  <a href="#a35a0c7432b346cfccce3eb3e8b670ea8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedce02f8454a265dacf0073d7de71f27"></a><!-- doxytag: member="DemoObs::_obs" ref="aedce02f8454a265dacf0073d7de71f27" args="" -->
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>_obs</b></td></tr>
+cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#aedce02f8454a265dacf0073d7de71f27">_obs</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Current image. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69758e3aee3c2015b266044f5133bf28"></a><!-- doxytag: member="DemoObs::_colorModel" ref="a69758e3aee3c2015b266044f5133bf28" args="" -->
-cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><b>_colorModel</b></td></tr>
+cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_obs.html#a69758e3aee3c2015b266044f5133bf28">_colorModel</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Current color model. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Example class for observation model. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae3cfe8b4b1d9525ab1e226bc3d065db1"></a><!-- doxytag: member="DemoObs::DemoObs" ref="ae3cfe8b4b1d9525ab1e226bc3d065db1" args="(cv::Mat &amp;firstObs, cv::Vec3b colorModel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_demo_obs.html#ae3cfe8b4b1d9525ab1e226bc3d065db1">DemoObs::DemoObs</a> </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>firstObs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Vec3b&#160;</td>
+          <td class="paramname"><em>colorModel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstObs</td><td>image for first observation </td></tr>
+    <tr><td class="paramname">colorModel</td><td>color to track </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a7cdcac7e35f0973a3529931e55b2ee96"></a><!-- doxytag: member="DemoObs::computeLikelihood" ref="a7cdcac7e35f0973a3529931e55b2ee96" args="(_Particle &amp;particle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="class_demo_obs.html#a7cdcac7e35f0973a3529931e55b2ee96">DemoObs::computeLikelihood</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class___particle.html">_Particle</a> &amp;&#160;</td>
+          <td class="paramname"><em>particle</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compute likelihood. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">particle</td><td>Particle to compute likelihood from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Computed likelihood</dd></dl>
+<p>Compute likelihood with 2-norm beetween the colorModel and the pixel of the particle. </p>
+
+<p>Implements <a class="el" href="class___observation.html#a48949521abe04d79b784bb47a3459be1">_Observation</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_demo_obs_a7cdcac7e35f0973a3529931e55b2ee96_cgraph.png" border="0" usemap="#class_demo_obs_a7cdcac7e35f0973a3529931e55b2ee96_cgraph" alt=""/></div>
+<map name="class_demo_obs_a7cdcac7e35f0973a3529931e55b2ee96_cgraph" id="class_demo_obs_a7cdcac7e35f0973a3529931e55b2ee96_cgraph">
+<area shape="rect" id="node3" href="class___particle.html#af896501fec2ee7084468c1fcd7b33b48" title="Get particle state vector." alt="" coords="251,5,419,35"/><area shape="rect" id="node5" href="class___particle.html#aeb1b1887cbec98605483738832c09089" title="Set particle likelihood." alt="" coords="256,59,413,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a35a0c7432b346cfccce3eb3e8b670ea8"></a><!-- doxytag: member="DemoObs::getCurrentObs" ref="a35a0c7432b346cfccce3eb3e8b670ea8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat &amp; <a class="el" href="class_demo_obs.html#a35a0c7432b346cfccce3eb3e8b670ea8">DemoObs::getCurrentObs</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get current image. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Current image </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a57966c1a35cd623b23a11f0c9576c3e8"></a><!-- doxytag: member="DemoObs::setColorModel" ref="a57966c1a35cd623b23a11f0c9576c3e8" args="(cv::Vec3b cm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_obs.html#a57966c1a35cd623b23a11f0c9576c3e8">DemoObs::setColorModel</a> </td>
+          <td>(</td>
+          <td class="paramtype">cv::Vec3b&#160;</td>
+          <td class="paramname"><em>cm</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Change the color to track. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cm</td><td>New color model </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae8a6e16104f9d5ab9fa3a947a1cb6400"></a><!-- doxytag: member="DemoObs::update" ref="ae8a6e16104f9d5ab9fa3a947a1cb6400" args="(cv::Mat &amp;newObs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_obs.html#ae8a6e16104f9d5ab9fa3a947a1cb6400">DemoObs::update</a> </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>newObs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update image. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newObs</td><td>New image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_demo_obs_8h_source.html">DemoObs.h</a></li>
 <li>src/observation/DemoObs.cpp</li>
@@ -162,7 +319,7 @@ cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><b>_colorModel</b><
     <ul>
       <li class="navelem"><a class="el" href="class_demo_obs.html">DemoObs</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -60,7 +60,7 @@ double DemoParticle::evaluateFromDynamic()
 	return this->evaluateGaussian(_stateVector, _oldStateVector, _varDynamic*_varDynamic);
 }
 
-double DemoParticle::evaluateFromImportance()
+double DemoParticle::evaluateFromDetector()
 {
 	return this->evaluateGaussian(_stateVector, _prevDetection, _varDetector*_varDetector);
 }

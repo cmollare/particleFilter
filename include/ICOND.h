@@ -4,7 +4,7 @@
 //! \author Christophe Mollaret
 //! \date June 2013
 //!
-//! This implementation is inspired from the paper or Isard and al.
+//! This implementation is inspired from the paper or Isard and al.\n
 //! "unifying low-level and high-level tracking in a stochastic framework"
 //!
 
@@ -17,8 +17,10 @@
 //! \class ICOND
 //! \brief ICONDensation algorithm
 //!
-//! This implementation is inspired from the paper or Isard and al.
-//! "unifying low-level and high-level tracking in a stochastic framework"
+//! This implementation is inspired from the paper or Isard and al.\n
+//! "unifying low-level and high-level tracking in a stochastic framework"\n
+//! ----WARNING----\n
+//! --this filter have not a proper implementation of importance sampling--\n
 //!
 
 template<class Particle, class Detector, class Viewer>
@@ -63,16 +65,16 @@ class ICOND : public _Filter<Particle, Viewer>
 		virtual void init(_Observation& observation);
 
 		//!
-		//! \fn virtual void update(_Observation& observation)=0
+		//! \fn virtual void update(_Observation& observation)
 		//! \brief update of filter's state
 		//! \param observation Observation model
 		//!
 		//! Call functions :
 		//!  - step()
-		//!  - updateWeights
+		//!  - updateWeights()
 		//!  - calcNeff()
 		//!  - computeMMSE()
-		//!  - resample() (if needef)
+		//!  - resample() (if needed)
 		//!
 		virtual void update(_Observation& observation);
 

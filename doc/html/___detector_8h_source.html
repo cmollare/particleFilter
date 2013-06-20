@@ -110,30 +110,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="___observation_8h.html" title="Abstract class for observation model.">_Observation.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="class___detector.html">00015</a> <span class="keyword">class </span><a class="code" href="class___detector.html">_Detector</a>
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017     <span class="keyword">public</span>:
-<a name="l00018"></a>00018         <a class="code" href="class___detector.html">_Detector</a>();
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020         <span class="keyword">virtual</span> <span class="keywordtype">void</span> init(<a class="code" href="class___observation.html">_Observation</a>&amp; obs)=0;
-<a name="l00021"></a>00021         <span class="keyword">virtual</span> std::vector&lt;double&gt;&amp; detect(<a class="code" href="class___observation.html">_Observation</a>&amp; obs)=0;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023                 <span class="keyword">inline</span> std::vector&lt;double&gt;&amp; getDetection()
-<a name="l00024"></a>00024                 {
-<a name="l00025"></a>00025                         <span class="keywordflow">return</span> _currentDetection;
-<a name="l00026"></a>00026                 }
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028                 <span class="keyword">inline</span> <span class="keywordtype">bool</span> isDetected()
-<a name="l00029"></a>00029                 {
-<a name="l00030"></a>00030                         <span class="keywordflow">return</span> _isDetected;
-<a name="l00031"></a>00031                 }
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <span class="keyword">protected</span>:
-<a name="l00034"></a>00034         std::vector&lt;double&gt; _currentDetection;
-<a name="l00035"></a>00035                 <span class="keywordtype">bool</span> _isDetected;
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="preprocessor">#endif // _DETECTOR_H</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class___detector.html">00022</a> <span class="keyword">class </span><a class="code" href="class___detector.html" title="Abstract class for detector.">_Detector</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     <span class="keyword">public</span>:
+<a name="l00025"></a>00025 
+<a name="l00030"></a>00030         <a class="code" href="class___detector.html#a65204a94b937a4d2036d9b125d95db4d" title="Constructor.">_Detector</a>();
+<a name="l00031"></a>00031 
+<a name="l00039"></a>00039         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class___detector.html#a88b6d10baba871d26ff7123621993169" title="Detector initialisation.">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs)=0;
+<a name="l00040"></a>00040 
+<a name="l00047"></a>00047         <span class="keyword">virtual</span> std::vector&lt;double&gt;&amp; <a class="code" href="class___detector.html#ae7eacac2105058c66c3e6d8d949effd2" title="Process detection.">detect</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs)=0;
+<a name="l00048"></a>00048 
+<a name="l00054"></a><a class="code" href="class___detector.html#a77b20a718478cfae6e87468dffe2c8d4">00054</a>                 <span class="keyword">inline</span> std::vector&lt;double&gt;&amp; <a class="code" href="class___detector.html#a77b20a718478cfae6e87468dffe2c8d4" title="Getter.">getDetection</a>()
+<a name="l00055"></a>00055                 {
+<a name="l00056"></a>00056                         <span class="keywordflow">return</span> <a class="code" href="class___detector.html#a6a9ce5630d98b99fbcbcfca7d44100b3" title="detection state vector">_currentDetection</a>;
+<a name="l00057"></a>00057                 }
+<a name="l00058"></a>00058 
+<a name="l00064"></a><a class="code" href="class___detector.html#a333d8c31b7364f32e135b04b50eeac1a">00064</a>                 <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class___detector.html#a333d8c31b7364f32e135b04b50eeac1a" title="Test if there was a detection.">isDetected</a>()
+<a name="l00065"></a>00065                 {
+<a name="l00066"></a>00066                         <span class="keywordflow">return</span> <a class="code" href="class___detector.html#a6dc61d037692c2e312df032d8fb05f9f" title="True if something is currently detected.">_isDetected</a>;
+<a name="l00067"></a>00067                 }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069     <span class="keyword">protected</span>:
+<a name="l00070"></a><a class="code" href="class___detector.html#a6a9ce5630d98b99fbcbcfca7d44100b3">00070</a>                 std::vector&lt;double&gt; <a class="code" href="class___detector.html#a6a9ce5630d98b99fbcbcfca7d44100b3" title="detection state vector">_currentDetection</a>; 
+<a name="l00071"></a><a class="code" href="class___detector.html#a6dc61d037692c2e312df032d8fb05f9f">00071</a>                 <span class="keywordtype">bool</span> <a class="code" href="class___detector.html#a6dc61d037692c2e312df032d8fb05f9f" title="True if something is currently detected.">_isDetected</a>; 
+<a name="l00072"></a>00072 };
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="preprocessor">#endif // _DETECTOR_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -154,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="___detector_8h.html">_Detector.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

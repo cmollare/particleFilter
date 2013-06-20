@@ -1,11 +1,11 @@
 #include "DemoViewer.h"
 
-DemoViewer::DemoViewer(std::string outputName) : Viewer(), _outputName(outputName)
+DemoViewer::DemoViewer(std::string outputName) : _Viewer(), _outputName(outputName)
 {
 	cv::namedWindow(_outputName.c_str());
 }
 
-DemoViewer::DemoViewer(std::string outputName, std::string controllerName) : Viewer(), _outputName(outputName), _controllerName(controllerName)
+DemoViewer::DemoViewer(std::string outputName, std::string controllerName) : _Viewer(), _outputName(outputName), _controllerName(controllerName)
 {
 	cv::namedWindow(_outputName.c_str());
 	cv::namedWindow(_controllerName.c_str());

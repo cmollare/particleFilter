@@ -103,12 +103,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">_Particle Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="_Particle" --><div class="dynheader">
+<!-- doxytag: class="_Particle" -->
+<p>Abstract class for particles.  
+ <a href="class___particle.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="___particle_8h_source.html">_Particle.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for _Particle:</div>
 <div class="dyncontent">
 <div class="center"><img src="class___particle__inherit__graph.png" border="0" usemap="#___particle_inherit__map" alt="Inheritance graph"/></div>
 <map name="___particle_inherit__map" id="___particle_inherit__map">
-<area shape="rect" id="node3" href="class_demo_particle.html" title="DemoParticle" alt="" coords="5,83,107,112"/></map>
+<area shape="rect" id="node3" href="class_demo_particle.html" title="Demonstration class for particle implementation." alt="" coords="5,83,107,112"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for _Particle:</div>
@@ -122,49 +127,293 @@ Collaboration diagram for _Particle:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a581b972275a85fc09837254f7b75927f"></a><!-- doxytag: member="_Particle::_Particle" ref="a581b972275a85fc09837254f7b75927f" args="(FilterEnv *pFilterEnv)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>_Particle</b> (<a class="el" href="class_filter_env.html">FilterEnv</a> *pFilterEnv)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56241238dd8022bb27fb28d6ae4bbf65"></a><!-- doxytag: member="_Particle::sampleFromPrior" ref="a56241238dd8022bb27fb28d6ae4bbf65" args="()=0" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromPrior</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe2892177ea592e3e803b8ce320ee33d"></a><!-- doxytag: member="_Particle::sampleFromDynamic" ref="abe2892177ea592e3e803b8ce320ee33d" args="()=0" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromDynamic</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a890d616ed41eddd447967f3f7c144dea"></a><!-- doxytag: member="_Particle::sampleFromDetector" ref="a890d616ed41eddd447967f3f7c144dea" args="(std::vector&lt; double &gt; &amp;detection)=0" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromDetector</b> (std::vector&lt; double &gt; &amp;detection)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a240b3a8a107f7b7f06976bb65c7974b4"></a><!-- doxytag: member="_Particle::evaluateFromDynamic" ref="a240b3a8a107f7b7f06976bb65c7974b4" args="()=0" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromDynamic</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9964d275322a220c4848975ddb2f4021"></a><!-- doxytag: member="_Particle::evaluateFromImportance" ref="a9964d275322a220c4848975ddb2f4021" args="()=0" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromImportance</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdd0818b7eaef788075b9487a2779e38"></a><!-- doxytag: member="_Particle::evaluateFromPrior" ref="acdd0818b7eaef788075b9487a2779e38" args="()=0" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromPrior</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb1b1887cbec98605483738832c09089"></a><!-- doxytag: member="_Particle::setLikelihood" ref="aeb1b1887cbec98605483738832c09089" args="(double &amp;likelihood)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLikelihood</b> (double &amp;likelihood)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9add73dbef3fdc422137f4865d421b2"></a><!-- doxytag: member="_Particle::getLikelihood" ref="af9add73dbef3fdc422137f4865d421b2" args="()" -->
-double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getLikelihood</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbce9feb08379b122a80a6dac0172ba2"></a><!-- doxytag: member="_Particle::getStateVector" ref="abbce9feb08379b122a80a6dac0172ba2" args="()" -->
-std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getStateVector</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d0dbaaf587fa9269509871e4bef856a"></a><!-- doxytag: member="_Particle::setStateVector" ref="a1d0dbaaf587fa9269509871e4bef856a" args="(std::vector&lt; double &gt; &amp;stateVec)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStateVector</b> (std::vector&lt; double &gt; &amp;stateVec)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a581b972275a85fc09837254f7b75927f">_Particle</a> (<a class="el" href="class_filter_env.html">FilterEnv</a> *pFilterEnv)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a581b972275a85fc09837254f7b75927f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a392875295a9e06ca1c50d9e3168645db"></a><!-- doxytag: member="_Particle::sampleFromPrior" ref="a392875295a9e06ca1c50d9e3168645db" args="()=0" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a392875295a9e06ca1c50d9e3168645db">sampleFromPrior</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to sample a particle from prior law. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c06b3c9e40f302a5a5ec0cc230bcbc3"></a><!-- doxytag: member="_Particle::sampleFromDynamic" ref="a4c06b3c9e40f302a5a5ec0cc230bcbc3" args="()=0" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a4c06b3c9e40f302a5a5ec0cc230bcbc3">sampleFromDynamic</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to sample a particle from dynamic model. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a24ac11d01a8e177c835c938ffa122012">sampleFromDetector</a> (std::vector&lt; double &gt; &amp;detection)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to sample a particle from detection.  <a href="#a24ac11d01a8e177c835c938ffa122012"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e7592162f72960f6099ac7d0191199"></a><!-- doxytag: member="_Particle::evaluateFromDynamic" ref="a50e7592162f72960f6099ac7d0191199" args="()=0" -->
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a50e7592162f72960f6099ac7d0191199">evaluateFromDynamic</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate sample from dynamic distribution <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac116b94066ea21838d6a85c889e2726b"></a><!-- doxytag: member="_Particle::evaluateFromDetector" ref="ac116b94066ea21838d6a85c889e2726b" args="()=0" -->
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#ac116b94066ea21838d6a85c889e2726b">evaluateFromDetector</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate sample from detector distribution <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80b5cbfccf2f6077623385b885a28c63"></a><!-- doxytag: member="_Particle::evaluateFromPrior" ref="a80b5cbfccf2f6077623385b885a28c63" args="()=0" -->
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a80b5cbfccf2f6077623385b885a28c63">evaluateFromPrior</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate sample from prior distribution <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#aeb1b1887cbec98605483738832c09089">setLikelihood</a> (double &amp;likelihood)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set particle likelihood.  <a href="#aeb1b1887cbec98605483738832c09089"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#ad76166a6d107e9cb64395ada925323ce">getLikelihood</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get particle likelihood.  <a href="#ad76166a6d107e9cb64395ada925323ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#af896501fec2ee7084468c1fcd7b33b48">getStateVector</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get particle state vector.  <a href="#af896501fec2ee7084468c1fcd7b33b48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a1d0dbaaf587fa9269509871e4bef856a">setStateVector</a> (std::vector&lt; double &gt; &amp;stateVec)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set particle state vector.  <a href="#a1d0dbaaf587fa9269509871e4bef856a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a877c695b781b05ba42c23ca2e909abb6"></a><!-- doxytag: member="_Particle::evaluateGaussian" ref="a877c695b781b05ba42c23ca2e909abb6" args="(std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, std::vector&lt; double &gt; &amp;var)" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateGaussian</b> (std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, std::vector&lt; double &gt; &amp;var)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7f6846d5b8f9970db2871d5afa90459"></a><!-- doxytag: member="_Particle::evaluateGaussian" ref="ae7f6846d5b8f9970db2871d5afa90459" args="(std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, double var)" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateGaussian</b> (std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, double var)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a877c695b781b05ba42c23ca2e909abb6">evaluateGaussian</a> (std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, std::vector&lt; double &gt; &amp;var)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a sample on a specified gaussian multivariate distribution.  <a href="#a877c695b781b05ba42c23ca2e909abb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#ae7f6846d5b8f9970db2871d5afa90459">evaluateGaussian</a> (std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, double var)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a sample on a specified gaussian multivariate distribution.  <a href="#ae7f6846d5b8f9970db2871d5afa90459"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f182fd277d70a417c68e70e583425c7"></a><!-- doxytag: member="_Particle::_pFilterEnv" ref="a3f182fd277d70a417c68e70e583425c7" args="" -->
-<a class="el" href="class_filter_env.html">FilterEnv</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_pFilterEnv</b></td></tr>
+<a class="el" href="class_filter_env.html">FilterEnv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a3f182fd277d70a417c68e70e583425c7">_pFilterEnv</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer on <a class="el" href="class_filter_env.html">FilterEnv</a> instance. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbbc262937cec5c7eb600bd298806718"></a><!-- doxytag: member="_Particle::_stateVector" ref="acbbc262937cec5c7eb600bd298806718" args="" -->
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_stateVector</b></td></tr>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#acbbc262937cec5c7eb600bd298806718">_stateVector</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle state vector. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3e6ccfd7e50cc26366453d721b4bd66"></a><!-- doxytag: member="_Particle::_oldStateVector" ref="ac3e6ccfd7e50cc26366453d721b4bd66" args="" -->
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_oldStateVector</b></td></tr>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#ac3e6ccfd7e50cc26366453d721b4bd66">_oldStateVector</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle old state vector. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8418c4ce91436141383480e1a42b977"></a><!-- doxytag: member="_Particle::_prevDetection" ref="aa8418c4ce91436141383480e1a42b977" args="" -->
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_prevDetection</b></td></tr>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#aa8418c4ce91436141383480e1a42b977">_prevDetection</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Last detection. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5dddbca34167386f5e8ec549bed1ce34"></a><!-- doxytag: member="_Particle::_rng" ref="a5dddbca34167386f5e8ec549bed1ce34" args="" -->
-boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><b>_rng</b></td></tr>
+boost::random::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a5dddbca34167386f5e8ec549bed1ce34">_rng</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer on random seed. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11682cfe475658b5206555fe24191da7"></a><!-- doxytag: member="_Particle::_likelihood" ref="a11682cfe475658b5206555fe24191da7" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>_likelihood</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class___particle.html#a11682cfe475658b5206555fe24191da7">_likelihood</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle likelihood. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Abstract class for particles. </p>
+<p>To create your own particle, derive this class </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a581b972275a85fc09837254f7b75927f"></a><!-- doxytag: member="_Particle::_Particle" ref="a581b972275a85fc09837254f7b75927f" args="(FilterEnv *pFilterEnv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class___particle.html#a581b972275a85fc09837254f7b75927f">_Particle::_Particle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_filter_env.html">FilterEnv</a> *&#160;</td>
+          <td class="paramname"><em>pFilterEnv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFilterEnv</td><td>Pointer to <a class="el" href="class_filter_env.html">FilterEnv</a> class </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a877c695b781b05ba42c23ca2e909abb6"></a><!-- doxytag: member="_Particle::evaluateGaussian" ref="a877c695b781b05ba42c23ca2e909abb6" args="(std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, std::vector&lt; double &gt; &amp;var)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="class___particle.html#a877c695b781b05ba42c23ca2e909abb6">_Particle::evaluateGaussian</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Evaluate a sample on a specified gaussian multivariate distribution. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>sample to evaluate </td></tr>
+    <tr><td class="paramname">mean</td><td>mean vector of the multivariate gaussian </td></tr>
+    <tr><td class="paramname">var</td><td>diagonal of the covariance matrix of the multivariate gaussian </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>computed value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7f6846d5b8f9970db2871d5afa90459"></a><!-- doxytag: member="_Particle::evaluateGaussian" ref="ae7f6846d5b8f9970db2871d5afa90459" args="(std::vector&lt; double &gt; &amp;x, std::vector&lt; double &gt; &amp;mean, double var)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="class___particle.html#a877c695b781b05ba42c23ca2e909abb6">_Particle::evaluateGaussian</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Evaluate a sample on a specified gaussian multivariate distribution. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>sample to evaluate </td></tr>
+    <tr><td class="paramname">mean</td><td>mean vector of the multivariate gaussian </td></tr>
+    <tr><td class="paramname">var</td><td>diagonal of the covariance matrix of the multivariate gaussian (in case of all variances on diagonal are equal) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>computed value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad76166a6d107e9cb64395ada925323ce"></a><!-- doxytag: member="_Particle::getLikelihood" ref="ad76166a6d107e9cb64395ada925323ce" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double &amp; <a class="el" href="class___particle.html#ad76166a6d107e9cb64395ada925323ce">_Particle::getLikelihood</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get particle likelihood. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Likelihood </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af896501fec2ee7084468c1fcd7b33b48"></a><!-- doxytag: member="_Particle::getStateVector" ref="af896501fec2ee7084468c1fcd7b33b48" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; &amp; <a class="el" href="class___particle.html#af896501fec2ee7084468c1fcd7b33b48">_Particle::getStateVector</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get particle state vector. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>State vector </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24ac11d01a8e177c835c938ffa122012"></a><!-- doxytag: member="_Particle::sampleFromDetector" ref="a24ac11d01a8e177c835c938ffa122012" args="(std::vector&lt; double &gt; &amp;detection)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class___particle.html#a24ac11d01a8e177c835c938ffa122012">_Particle::sampleFromDetector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>detection</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Function to sample a particle from detection. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detection</td><td>State vector of detection </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_demo_particle.html#a2725096f3278f696efdb612837f31c42">DemoParticle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb1b1887cbec98605483738832c09089"></a><!-- doxytag: member="_Particle::setLikelihood" ref="aeb1b1887cbec98605483738832c09089" args="(double &amp;likelihood)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class___particle.html#aeb1b1887cbec98605483738832c09089">_Particle::setLikelihood</a> </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>likelihood</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set particle likelihood. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">likelihood</td><td>Likelihood </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d0dbaaf587fa9269509871e4bef856a"></a><!-- doxytag: member="_Particle::setStateVector" ref="a1d0dbaaf587fa9269509871e4bef856a" args="(std::vector&lt; double &gt; &amp;stateVec)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class___particle.html#a1d0dbaaf587fa9269509871e4bef856a">_Particle::setStateVector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stateVec</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set particle state vector. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stateVec</td><td>new state vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="___particle_8h_source.html">_Particle.h</a></li>
 <li>src/particle/_Particle.cpp</li>
@@ -189,7 +438,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_likelihood</b></td
     <ul>
       <li class="navelem"><a class="el" href="class___particle.html">_Particle</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

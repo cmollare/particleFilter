@@ -114,22 +114,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="___filter_8h.html" title="Abstract class for particle filter.">_Filter.h</a>&quot;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="___viewer_8h.html" title="Abstract class for viewer.">_Viewer.h</a>&quot;</span>
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Particle, <span class="keyword">class</span> Viewer&gt;
-<a name="l00020"></a><a class="code" href="class_s_i_r.html">00020</a> <span class="keyword">class </span><a class="code" href="class_s_i_r.html">SIR</a> : <span class="keyword">public</span> <a class="code" href="class___filter.html" title="Abstract class for particle filter.">_Filter</a>&lt;Particle, Viewer&gt;
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022     <span class="keyword">public</span>:
-<a name="l00023"></a>00023         <a class="code" href="class_s_i_r.html">SIR</a>(<span class="keywordtype">int</span> nbParticles);
-<a name="l00024"></a>00024         ~<a class="code" href="class_s_i_r.html">SIR</a>();
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#a69e9d6b03457d5968cf9b4f263a236a6" title="filter initialisation">init</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation);
-<a name="l00027"></a>00027                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation);
-<a name="l00028"></a>00028                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#aa79a7467ceb89713c14407d67e7ac0a0" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html">_Observation</a>&amp; observation, <a class="code" href="class_viewer.html">Viewer</a>&amp; viewer);
-<a name="l00029"></a>00029                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#a64afc078893eceef31ff6eb067b525eb" title="update particles">step</a>();
-<a name="l00030"></a>00030 };
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;SIR.tpp&quot;</span>
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="preprocessor">#endif // SIR_H</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Particle, <span class="keyword">class</span> Viewer&gt;
+<a name="l00029"></a><a class="code" href="class_s_i_r.html">00029</a> <span class="keyword">class </span><a class="code" href="class_s_i_r.html" title="SIR algorithm.">SIR</a> : <span class="keyword">public</span> <a class="code" href="class___filter.html" title="Abstract class for particle filter.">_Filter</a>&lt;Particle, Viewer&gt;
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031     <span class="keyword">public</span>:
+<a name="l00037"></a>00037         <a class="code" href="class_s_i_r.html#a1638d662725aa9caccb998b314e56612" title="Constructor.">SIR</a>(<span class="keywordtype">int</span> nbParticles);
+<a name="l00038"></a>00038 
+<a name="l00043"></a>00043         <a class="code" href="class_s_i_r.html#a54f0fee54da60e3b313dfd907cbe1980" title="Destructor.">~SIR</a>();
+<a name="l00044"></a>00044 
+<a name="l00052"></a>00052                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#af9c10211b8bf89846b1692eb3fdf5cd4" title="filter initialisation">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
+<a name="l00053"></a>00053 
+<a name="l00066"></a>00066                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation);
+<a name="l00067"></a>00067 
+<a name="l00077"></a>00077                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#a4544ae41ab02eb7c9ec8c3c9ae188a90" title="update of filter&#39;s state">update</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; observation, Viewer&amp; viewer);
+<a name="l00078"></a>00078 
+<a name="l00085"></a>00085                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_i_r.html#a7093692612f88723e78ee73e2ed78c2e" title="update particles">step</a>();
+<a name="l00086"></a>00086 };
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#include &quot;SIR.tpp&quot;</span>
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="preprocessor">#endif // SIR_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -150,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_s_i_r_8h.html">SIR.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

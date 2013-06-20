@@ -113,25 +113,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor"></span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="___particle_8h.html" title="Abstract class for particle (state vector)">_Particle.h</a>&quot;</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="class_demo_particle.html">00018</a> <span class="keyword">class </span><a class="code" href="class_demo_particle.html">DemoParticle</a> : <span class="keyword">public</span> <a class="code" href="class___particle.html">_Particle</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020     <span class="keyword">public</span>:
-<a name="l00021"></a>00021                 <a class="code" href="class_demo_particle.html">DemoParticle</a>(<a class="code" href="class_filter_env.html">FilterEnv</a>* pFilterEnv);
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">void</span> sampleFromPrior();
-<a name="l00024"></a>00024                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> sampleFromDynamic();
-<a name="l00025"></a>00025                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> sampleFromDetector(std::vector&lt;double&gt;&amp; detection);
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> evaluateFromDynamic();
-<a name="l00028"></a>00028                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> evaluateFromImportance();
-<a name="l00029"></a>00029                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> evaluateFromPrior();
+<a name="l00018"></a>00018 
+<a name="l00027"></a><a class="code" href="class_demo_particle.html">00027</a> <span class="keyword">class </span><a class="code" href="class_demo_particle.html" title="Demonstration class for particle implementation.">DemoParticle</a> : <span class="keyword">public</span> <a class="code" href="class___particle.html" title="Abstract class for particles.">_Particle</a>
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029     <span class="keyword">public</span>:
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031         <span class="keyword">protected</span>:
-<a name="l00032"></a>00032                 <span class="keywordtype">double</span> _varDetector, _varDynamic;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 };
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#endif // DEMOPARTICLE_H</span>
+<a name="l00036"></a>00036                 <a class="code" href="class_demo_particle.html#aea893680394839946723a75f035e6bcf" title="Constructor.">DemoParticle</a>(<a class="code" href="class_filter_env.html">FilterEnv</a>* pFilterEnv);
+<a name="l00037"></a>00037 
+<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_particle.html#a0ae835a66ec60fcdff7ae1ae4f6e8431" title="Sample from prior law.">sampleFromPrior</a>();
+<a name="l00045"></a>00045 
+<a name="l00052"></a>00052                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_particle.html#a697c9a5fafad391c1f06856885b9cb1f" title="Sample from dynamic.">sampleFromDynamic</a>();
+<a name="l00053"></a>00053 
+<a name="l00061"></a>00061                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_particle.html#a2725096f3278f696efdb612837f31c42" title="Sample from detection.">sampleFromDetector</a>(std::vector&lt;double&gt;&amp; detection);
+<a name="l00062"></a>00062 
+<a name="l00067"></a>00067                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_demo_particle.html#a5619135e551afc5991a28d96aef6f287" title="Evaluate sample from dynamic multivariate gaussian.">evaluateFromDynamic</a>();
+<a name="l00068"></a>00068 
+<a name="l00073"></a>00073                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_demo_particle.html#a7f3628ad0d376f593365a2ba68a34d56" title="evaluate sample from detector distribution">evaluateFromDetector</a>();
+<a name="l00074"></a>00074 
+<a name="l00079"></a>00079                 <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_demo_particle.html#ab0948ae63052784079b5c83081429a7c" title="Evaluate sample from prior uniform law.">evaluateFromPrior</a>();
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         <span class="keyword">protected</span>:
+<a name="l00082"></a><a class="code" href="class_demo_particle.html#a9d0da1fbbbaccb7376dd6e47a15de0b7">00082</a>                 <span class="keywordtype">double</span> <a class="code" href="class_demo_particle.html#a9d0da1fbbbaccb7376dd6e47a15de0b7" title="Variance of detector multivariate gaussian.">_varDetector</a>; 
+<a name="l00083"></a><a class="code" href="class_demo_particle.html#a8ef54adff53b3a3047bb85d36084c9c9">00083</a>                 <span class="keywordtype">double</span> <a class="code" href="class_demo_particle.html#a8ef54adff53b3a3047bb85d36084c9c9" title="Variance of dynamic multivariate gaussian.">_varDynamic</a>; 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 };
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // DEMOPARTICLE_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -152,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_demo_particle_8h.html">DemoParticle.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

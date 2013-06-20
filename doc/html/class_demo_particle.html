@@ -102,46 +102,156 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DemoParticle Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="DemoParticle" --><!-- doxytag: inherits="_Particle" --><div class="dynheader">
+<!-- doxytag: class="DemoParticle" --><!-- doxytag: inherits="_Particle" -->
+<p>Demonstration class for particle implementation.  
+ <a href="class_demo_particle.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_demo_particle_8h_source.html">DemoParticle.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for DemoParticle:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_demo_particle__inherit__graph.png" border="0" usemap="#_demo_particle_inherit__map" alt="Inheritance graph"/></div>
 <map name="_demo_particle_inherit__map" id="_demo_particle_inherit__map">
-<area shape="rect" id="node2" href="class___particle.html" title="_Particle" alt="" coords="20,5,92,35"/></map>
+<area shape="rect" id="node2" href="class___particle.html" title="Abstract class for particles." alt="" coords="20,5,92,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for DemoParticle:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_demo_particle__coll__graph.png" border="0" usemap="#_demo_particle_coll__map" alt="Collaboration graph"/></div>
 <map name="_demo_particle_coll__map" id="_demo_particle_coll__map">
-<area shape="rect" id="node2" href="class___particle.html" title="_Particle" alt="" coords="20,101,92,131"/><area shape="rect" id="node4" href="class_filter_env.html" title="FilterEnv" alt="" coords="19,5,93,35"/></map>
+<area shape="rect" id="node2" href="class___particle.html" title="Abstract class for particles." alt="" coords="20,101,92,131"/><area shape="rect" id="node4" href="class_filter_env.html" title="FilterEnv" alt="" coords="19,5,93,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_demo_particle-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea893680394839946723a75f035e6bcf"></a><!-- doxytag: member="DemoParticle::DemoParticle" ref="aea893680394839946723a75f035e6bcf" args="(FilterEnv *pFilterEnv)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>DemoParticle</b> (<a class="el" href="class_filter_env.html">FilterEnv</a> *pFilterEnv)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ae835a66ec60fcdff7ae1ae4f6e8431"></a><!-- doxytag: member="DemoParticle::sampleFromPrior" ref="a0ae835a66ec60fcdff7ae1ae4f6e8431" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromPrior</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a697c9a5fafad391c1f06856885b9cb1f"></a><!-- doxytag: member="DemoParticle::sampleFromDynamic" ref="a697c9a5fafad391c1f06856885b9cb1f" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromDynamic</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2725096f3278f696efdb612837f31c42"></a><!-- doxytag: member="DemoParticle::sampleFromDetector" ref="a2725096f3278f696efdb612837f31c42" args="(std::vector&lt; double &gt; &amp;detection)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sampleFromDetector</b> (std::vector&lt; double &gt; &amp;detection)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#aea893680394839946723a75f035e6bcf">DemoParticle</a> (<a class="el" href="class_filter_env.html">FilterEnv</a> *pFilterEnv)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aea893680394839946723a75f035e6bcf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a0ae835a66ec60fcdff7ae1ae4f6e8431">sampleFromPrior</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from prior law.  <a href="#a0ae835a66ec60fcdff7ae1ae4f6e8431"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a697c9a5fafad391c1f06856885b9cb1f">sampleFromDynamic</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from dynamic.  <a href="#a697c9a5fafad391c1f06856885b9cb1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a2725096f3278f696efdb612837f31c42">sampleFromDetector</a> (std::vector&lt; double &gt; &amp;detection)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from detection.  <a href="#a2725096f3278f696efdb612837f31c42"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5619135e551afc5991a28d96aef6f287"></a><!-- doxytag: member="DemoParticle::evaluateFromDynamic" ref="a5619135e551afc5991a28d96aef6f287" args="()" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromDynamic</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1b6bd778cd303e1c24ed5448f64bd65"></a><!-- doxytag: member="DemoParticle::evaluateFromImportance" ref="aa1b6bd778cd303e1c24ed5448f64bd65" args="()" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromImportance</b> ()</td></tr>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a5619135e551afc5991a28d96aef6f287">evaluateFromDynamic</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate sample from dynamic multivariate gaussian. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f3628ad0d376f593365a2ba68a34d56"></a><!-- doxytag: member="DemoParticle::evaluateFromDetector" ref="a7f3628ad0d376f593365a2ba68a34d56" args="()" -->
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a7f3628ad0d376f593365a2ba68a34d56">evaluateFromDetector</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate sample from detector distribution <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0948ae63052784079b5c83081429a7c"></a><!-- doxytag: member="DemoParticle::evaluateFromPrior" ref="ab0948ae63052784079b5c83081429a7c" args="()" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateFromPrior</b> ()</td></tr>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#ab0948ae63052784079b5c83081429a7c">evaluateFromPrior</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate sample from prior uniform law. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d0da1fbbbaccb7376dd6e47a15de0b7"></a><!-- doxytag: member="DemoParticle::_varDetector" ref="a9d0da1fbbbaccb7376dd6e47a15de0b7" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>_varDetector</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a9d0da1fbbbaccb7376dd6e47a15de0b7">_varDetector</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Variance of detector multivariate gaussian. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ef54adff53b3a3047bb85d36084c9c9"></a><!-- doxytag: member="DemoParticle::_varDynamic" ref="a8ef54adff53b3a3047bb85d36084c9c9" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>_varDynamic</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_particle.html#a8ef54adff53b3a3047bb85d36084c9c9">_varDynamic</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Variance of dynamic multivariate gaussian. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Demonstration class for particle implementation. </p>
+<p>This class shows how to implement a particle. The state vector is [u, v], the position in an image. The dynamic is a random walk and the prior low is uniform in the image. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aea893680394839946723a75f035e6bcf"></a><!-- doxytag: member="DemoParticle::DemoParticle" ref="aea893680394839946723a75f035e6bcf" args="(FilterEnv *pFilterEnv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_demo_particle.html#aea893680394839946723a75f035e6bcf">DemoParticle::DemoParticle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_filter_env.html">FilterEnv</a> *&#160;</td>
+          <td class="paramname"><em>pFilterEnv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to <a class="el" href="class_filter_env.html">FilterEnv</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a2725096f3278f696efdb612837f31c42"></a><!-- doxytag: member="DemoParticle::sampleFromDetector" ref="a2725096f3278f696efdb612837f31c42" args="(std::vector&lt; double &gt; &amp;detection)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_particle.html#a2725096f3278f696efdb612837f31c42">DemoParticle::sampleFromDetector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>detection</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sample from detection. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detection</td><td>Detector state vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sample from a random qalk around the detector state with variance _varDetector </p>
+
+<p>Implements <a class="el" href="class___particle.html#a24ac11d01a8e177c835c938ffa122012">_Particle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a697c9a5fafad391c1f06856885b9cb1f"></a><!-- doxytag: member="DemoParticle::sampleFromDynamic" ref="a697c9a5fafad391c1f06856885b9cb1f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_particle.html#a697c9a5fafad391c1f06856885b9cb1f">DemoParticle::sampleFromDynamic</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sample from dynamic. </p>
+<p>Sample from random walk around the previous particle with variance _varDynamic </p>
+
+<p>Implements <a class="el" href="class___particle.html#a4c06b3c9e40f302a5a5ec0cc230bcbc3">_Particle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ae835a66ec60fcdff7ae1ae4f6e8431"></a><!-- doxytag: member="DemoParticle::sampleFromPrior" ref="a0ae835a66ec60fcdff7ae1ae4f6e8431" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_particle.html#a0ae835a66ec60fcdff7ae1ae4f6e8431">DemoParticle::sampleFromPrior</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sample from prior law. </p>
+<p>Sample from a uniform law on all image. </p>
+
+<p>Implements <a class="el" href="class___particle.html#a392875295a9e06ca1c50d9e3168645db">_Particle</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_demo_particle_8h_source.html">DemoParticle.h</a></li>
 <li>src/particle/DemoParticle.cpp</li>
@@ -166,7 +276,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_varDynamic</b></td
     <ul>
       <li class="navelem"><a class="el" href="class_demo_particle.html">DemoParticle</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

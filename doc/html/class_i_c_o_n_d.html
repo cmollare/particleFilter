@@ -137,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">filter initialisation  <a href="#a71623d6dee6ac3cf2d3340cf6b5bbcf9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#a33d15f6211e31d95c974768d326efb43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_c_o_n_d.html#a0abe8cd3eb5eb4a8f620de5e47cdb518">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation, <a class="el" href="class_viewer.html">Viewer</a> &amp;viewer)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_c_o_n_d.html#a0abe8cd3eb5eb4a8f620de5e47cdb518">update</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation, Viewer &amp;viewer)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update of filter's state  <a href="#a0abe8cd3eb5eb4a8f620de5e47cdb518"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5">updateWeights</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;observation)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">update weights of particles  <a href="#a7f2560fb2283f949c373c101f3efb2c5"></a><br/></td></tr>
@@ -166,7 +166,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 class ICOND&lt; Particle, Detector, Viewer &gt;</h3>
 
 <p>ICONDensation algorithm. </p>
-<p>This implementation is inspired from the paper or Isard and al. "unifying low-level and high-level tracking in a stochastic framework" </p>
+<p>This implementation is inspired from the paper or Isard and al.<br/>
+ "unifying low-level and high-level tracking in a stochastic framework"<br/>
+ ----WARNING----<br/>
+ --this filter have not a proper implementation of importance sampling--<br/>
+ </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a71d5044e6fadfeeabf4dc090bec61f81"></a><!-- doxytag: member="ICOND::ICOND" ref="a71d5044e6fadfeeabf4dc090bec61f81" args="(int nbParticles, double q, double r)" -->
 <div class="memitem">
@@ -175,7 +179,7 @@ class ICOND&lt; Particle, Detector, Viewer &gt;</h3>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html">ICOND</a> </td>
+          <td class="memname"><a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html">ICOND</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>nbParticles</em>, </td>
@@ -220,7 +224,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html">ICOND</a> </td>
+          <td class="memname"><a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html">ICOND</a> </td>
           <td>(</td>
           <td class="paramtype">Detector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -274,7 +278,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9">init</a> </td>
+          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9">init</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em></td><td>)</td>
@@ -304,7 +308,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa">step</a> </td>
+          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa">step</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -327,7 +331,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">update</a> </td>
+          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">update</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em></td><td>)</td>
@@ -347,10 +351,10 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 <p>Call functions :</p>
 <ul>
 <li><a class="el" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa" title="update particles">step()</a></li>
-<li>updateWeights</li>
+<li><a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5" title="update weights of particles">updateWeights()</a></li>
 <li><a class="el" href="class___filter.html#a1074409959074d40349cdd9fbd1ab96b" title="Compute Neff.">calcNeff()</a></li>
 <li><a class="el" href="class___filter.html#a3458adc90d2b0cbda0a2f0951bcec6cd" title="Compute filter MMSE estimate.">computeMMSE()</a></li>
-<li><a class="el" href="class___filter.html#aba33334c8c4c115f0f3dd4f0b2f286f7" title="resampling function">resample()</a> (if needef) </li>
+<li><a class="el" href="class___filter.html#aba33334c8c4c115f0f3dd4f0b2f286f7" title="resampling function">resample()</a> (if needed) </li>
 </ul>
 
 <p>Implements <a class="el" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521">_Filter&lt; Particle, Viewer &gt;</a>.</p>
@@ -364,7 +368,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">update</a> </td>
+          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">update</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em>, </td>
@@ -372,7 +376,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_viewer.html">Viewer</a> &amp;&#160;</td>
+          <td class="paramtype">Viewer &amp;&#160;</td>
           <td class="paramname"><em>viewer</em>&#160;</td>
         </tr>
         <tr>
@@ -405,7 +409,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
 template&lt;class Particle, class Detector, class Viewer&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, <a class="el" href="class_viewer.html">Viewer</a> &gt;::<a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5">updateWeights</a> </td>
+          <td class="memname">void <a class="el" href="class_i_c_o_n_d.html">ICOND</a>&lt; Particle, Detector, Viewer &gt;::<a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5">updateWeights</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class___observation.html">_Observation</a> &amp;&#160;</td>
           <td class="paramname"><em>observation</em></td><td>)</td>
@@ -451,7 +455,7 @@ template&lt;class Particle, class Detector, class Viewer&gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="class_i_c_o_n_d.html">ICOND</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

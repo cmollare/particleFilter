@@ -23,7 +23,7 @@ ICOND<Particle, Detector, Viewer>::~ICOND()
 template<class Particle, class Detector, class Viewer>
 void ICOND<Particle, Detector, Viewer>::init(_Observation& observation)
 {
-	this->_Ns=this->_nbParticles/1.2;
+	this->_Ns=this->_nbParticles/1.4;
 	this->_Filter<Particle, Viewer>::init(observation);
 	this->_detector->init(observation);
 	this->_vLambda.resize(this->_nbParticles, 1);
@@ -81,7 +81,7 @@ void ICOND<Particle, Detector, Viewer>::step()
 		if (alpha < this->_q)
 		{
 			this->_vParticles[i]->sampleFromPrior();
-			this->_vLambda[i]=1;
+			this->_vLambda[i]=this->_vWeights[i];
 			nbPrior++;
 		}
 		else if ((alpha >= this->_q) && (alpha < this->_q+this->_r))//sample from importance
@@ -91,14 +91,16 @@ void ICOND<Particle, Detector, Viewer>::step()
 				//this->_vParticles[i]->sampleFromPrior();
 				//g = this->_vParticles[i]->evaluateFromPrior();
 				this->_vParticles[i]->sampleFromDynamic();
+				this->_vLambda[i]=this->_vWeights[i];
 				nbDyn++;
 			}
 			else //else sample from detection
 			{
 				this->_vParticles[i]->sampleFromDetector(this->_detector->getDetection());
-				g = this->_vParticles[i]->evaluateFromPrior();
-				f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
-				this->_vLambda[i] = f/g;
+				//g = this->_vParticles[i]->evaluateFromDetector();
+				//f = this->_vWeights[i]*this->_vParticles[i]->evaluateFromDynamic();
+				//this->_vLambda[i] = f/g;
+				this->_vLambda[i] = this->_vWeights[i];
 				nbImp++;
 			}
 
@@ -106,12 +108,12 @@ void ICOND<Particle, Detector, Viewer>::step()
 		else
 		{
 			this->_vParticles[i]->sampleFromDynamic();
-			this->_vLambda[i]=1;
+			this->_vLambda[i]=this->_vWeights[i];
 			nbDyn++;
 		}
 	}
 
-	std::cout << "prior : " << nbPrior << " importance : " << nbImp << " dynamics : " << nbDyn << std::endl;
+	//std::cout << "prior : " << nbPrior << " importance : " << nbImp << " dynamics : " << nbDyn << std::endl;
 }
 
 template<class Particle, class Detector, class Viewer>

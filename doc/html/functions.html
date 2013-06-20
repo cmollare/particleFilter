@@ -91,6 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="#index__"><span>_</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -120,14 +122,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_cdf
 : <a class="el" href="class___filter.html#a6527896e7621469c14045818d1627e7a">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
+<li>_colorModel
+: <a class="el" href="class_demo_obs.html#a69758e3aee3c2015b266044f5133bf28">DemoObs</a>
+</li>
+<li>_currentDetection
+: <a class="el" href="class___detector.html#a6a9ce5630d98b99fbcbcfca7d44100b3">_Detector</a>
+</li>
+<li>_Detector()
+: <a class="el" href="class___detector.html#a65204a94b937a4d2036d9b125d95db4d">_Detector</a>
+</li>
 <li>_detector
 : <a class="el" href="class_i_c_o_n_d.html#a67108c546dfb3c8562dfec33e865bf03">ICOND&lt; Particle, Detector, Viewer &gt;</a>
 </li>
 <li>_Filter()
 : <a class="el" href="class___filter.html#ab1169f01775408d00199dda013210841">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
+<li>_isDetected
+: <a class="el" href="class___detector.html#a6dc61d037692c2e312df032d8fb05f9f">_Detector</a>
+</li>
 <li>_isDetectorAllocated
 : <a class="el" href="class_i_c_o_n_d.html#adefff17562c4f940bf5ebed64a962b4e">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+</li>
+<li>_likelihood
+: <a class="el" href="class___particle.html#a11682cfe475658b5206555fe24191da7">_Particle</a>
 </li>
 <li>_mmseParticle
 : <a class="el" href="class___filter.html#a1fb12eb7695b915fd758c74ff718cc0c">_Filter&lt; Particle, Viewer &gt;</a>
@@ -141,14 +158,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_Ns
 : <a class="el" href="class___filter.html#a9e0fc1859f1c88924ed959855434feb9">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
+<li>_obs
+: <a class="el" href="class_demo_obs.html#aedce02f8454a265dacf0073d7de71f27">DemoObs</a>
+</li>
+<li>_Observation()
+: <a class="el" href="class___observation.html#a390f09c5a53cd84d20ce358941ea48a6">_Observation</a>
+</li>
+<li>_oldStateVector
+: <a class="el" href="class___particle.html#ac3e6ccfd7e50cc26366453d721b4bd66">_Particle</a>
+</li>
+<li>_Particle()
+: <a class="el" href="class___particle.html#a581b972275a85fc09837254f7b75927f">_Particle</a>
+</li>
 <li>_pFilterEnv
 : <a class="el" href="class___filter.html#a249afc45de8c827cee2e33d857ffc54f">_Filter&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class___particle.html#a3f182fd277d70a417c68e70e583425c7">_Particle</a>
+</li>
+<li>_prevDetection
+: <a class="el" href="class___particle.html#aa8418c4ce91436141383480e1a42b977">_Particle</a>
 </li>
 <li>_q
 : <a class="el" href="class_i_c_o_n_d.html#a7ab1284e5e76597a422479151d196194">ICOND&lt; Particle, Detector, Viewer &gt;</a>
 </li>
 <li>_r
 : <a class="el" href="class_i_c_o_n_d.html#a0b1d5a8831675784d3393d6b32213d66">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+</li>
+<li>_rng
+: <a class="el" href="class___particle.html#a5dddbca34167386f5e8ec549bed1ce34">_Particle</a>
+</li>
+<li>_stateVector
+: <a class="el" href="class___particle.html#acbbc262937cec5c7eb600bd298806718">_Particle</a>
+</li>
+<li>_varDetector
+: <a class="el" href="class_demo_particle.html#a9d0da1fbbbaccb7376dd6e47a15de0b7">DemoParticle</a>
+</li>
+<li>_varDynamic
+: <a class="el" href="class_demo_particle.html#a8ef54adff53b3a3047bb85d36084c9c9">DemoParticle</a>
+</li>
+<li>_Viewer()
+: <a class="el" href="class___viewer.html#aaea3273de492afc32294888279379086">_Viewer&lt; Particle &gt;</a>
 </li>
 <li>_vLambda
 : <a class="el" href="class_i_c_o_n_d.html#a1127cb48dc8b945fa116020b15a50c70">ICOND&lt; Particle, Detector, Viewer &gt;</a>
@@ -169,18 +217,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>calcNeff()
 : <a class="el" href="class___filter.html#a1074409959074d40349cdd9fbd1ab96b">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
+<li>computeLikelihood()
+: <a class="el" href="class___observation.html#a48949521abe04d79b784bb47a3459be1">_Observation</a>
+, <a class="el" href="class_demo_obs.html#a7cdcac7e35f0973a3529931e55b2ee96">DemoObs</a>
+</li>
 <li>computeMMSE()
 : <a class="el" href="class___filter.html#a3458adc90d2b0cbda0a2f0951bcec6cd">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
 </ul>
 
 
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DemoObs()
+: <a class="el" href="class_demo_obs.html#ae3cfe8b4b1d9525ab1e226bc3d065db1">DemoObs</a>
+</li>
+<li>DemoParticle()
+: <a class="el" href="class_demo_particle.html#aea893680394839946723a75f035e6bcf">DemoParticle</a>
+</li>
+<li>detect()
+: <a class="el" href="class_mouse_detector.html#a145e8ce7950a13d5ea40546258daa674">MouseDetector</a>
+, <a class="el" href="class___detector.html#ae7eacac2105058c66c3e6d8d949effd2">_Detector</a>
+</li>
+<li>displayEstimatedParticle()
+: <a class="el" href="class___viewer.html#a60ab7332f5c193ef292b6cf84534014e">_Viewer&lt; Particle &gt;</a>
+</li>
+<li>displayResampling()
+: <a class="el" href="class___viewer.html#ad0ed7063f847cb2e1e553d78c2ad1dda">_Viewer&lt; Particle &gt;</a>
+</li>
+<li>displaySampling()
+: <a class="el" href="class___viewer.html#a125f4ffefacb98585ca587df65bb271b">_Viewer&lt; Particle &gt;</a>
+</li>
+<li>displayWeightedParticles()
+: <a class="el" href="class___viewer.html#a6c32bfc6269157282459f2160344b1e2">_Viewer&lt; Particle &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>evaluateFromDetector()
+: <a class="el" href="class___particle.html#ac116b94066ea21838d6a85c889e2726b">_Particle</a>
+, <a class="el" href="class_demo_particle.html#a7f3628ad0d376f593365a2ba68a34d56">DemoParticle</a>
+</li>
+<li>evaluateFromDynamic()
+: <a class="el" href="class_demo_particle.html#a5619135e551afc5991a28d96aef6f287">DemoParticle</a>
+, <a class="el" href="class___particle.html#a50e7592162f72960f6099ac7d0191199">_Particle</a>
+</li>
+<li>evaluateFromPrior()
+: <a class="el" href="class___particle.html#a80b5cbfccf2f6077623385b885a28c63">_Particle</a>
+, <a class="el" href="class_demo_particle.html#ab0948ae63052784079b5c83081429a7c">DemoParticle</a>
+</li>
+<li>evaluateGaussian()
+: <a class="el" href="class___particle.html#ae7f6846d5b8f9970db2871d5afa90459">_Particle</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getCurrentObs()
+: <a class="el" href="class_demo_obs.html#a35a0c7432b346cfccce3eb3e8b670ea8">DemoObs</a>
+</li>
+<li>getDetection()
+: <a class="el" href="class___detector.html#a77b20a718478cfae6e87468dffe2c8d4">_Detector</a>
+</li>
+<li>getLikelihood()
+: <a class="el" href="class___particle.html#ad76166a6d107e9cb64395ada925323ce">_Particle</a>
+</li>
 <li>getParticleMMSE()
 : <a class="el" href="class___filter.html#a6ab61f13215a3d489ce3d84c1286a1c9">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
 <li>getParticleVector()
 : <a class="el" href="class___filter.html#ace431f870bf74ac2007b09db19005548">_Filter&lt; Particle, Viewer &gt;</a>
+</li>
+<li>getStateVector()
+: <a class="el" href="class___particle.html#af896501fec2ee7084468c1fcd7b33b48">_Particle</a>
 </li>
 <li>getWeightVector()
 : <a class="el" href="class___filter.html#af5f5a1f6f026c84d56d55e3f4107752a">_Filter&lt; Particle, Viewer &gt;</a>
@@ -193,9 +302,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_i_c_o_n_d.html#a71d5044e6fadfeeabf4dc090bec61f81">ICOND&lt; Particle, Detector, Viewer &gt;</a>
 </li>
 <li>init()
-: <a class="el" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+: <a class="el" href="class_s_i_r.html#af9c10211b8bf89846b1692eb3fdf5cd4">SIR&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class_mouse_detector.html#ac998b07903aed7974ecaea0522b8402a">MouseDetector</a>
+, <a class="el" href="class_i_c_o_n_d.html#a71623d6dee6ac3cf2d3340cf6b5bbcf9">ICOND&lt; Particle, Detector, Viewer &gt;</a>
 , <a class="el" href="class___filter.html#acc2f1e469436aead66277ba5ab4edcc8">_Filter&lt; Particle, Viewer &gt;</a>
-, <a class="el" href="class_s_i_r.html#a69e9d6b03457d5968cf9b4f263a236a6">SIR&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class___detector.html#a88b6d10baba871d26ff7123621993169">_Detector</a>
+</li>
+<li>isDetected()
+: <a class="el" href="class___detector.html#a333d8c31b7364f32e135b04b50eeac1a">_Detector</a>
 </li>
 </ul>
 
@@ -208,10 +322,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>sampleFromDetector()
+: <a class="el" href="class___particle.html#a24ac11d01a8e177c835c938ffa122012">_Particle</a>
+, <a class="el" href="class_demo_particle.html#a2725096f3278f696efdb612837f31c42">DemoParticle</a>
+</li>
+<li>sampleFromDynamic()
+: <a class="el" href="class_demo_particle.html#a697c9a5fafad391c1f06856885b9cb1f">DemoParticle</a>
+, <a class="el" href="class___particle.html#a4c06b3c9e40f302a5a5ec0cc230bcbc3">_Particle</a>
+</li>
+<li>sampleFromPrior()
+: <a class="el" href="class___particle.html#a392875295a9e06ca1c50d9e3168645db">_Particle</a>
+, <a class="el" href="class_demo_particle.html#a0ae835a66ec60fcdff7ae1ae4f6e8431">DemoParticle</a>
+</li>
+<li>setColorModel()
+: <a class="el" href="class_demo_obs.html#a57966c1a35cd623b23a11f0c9576c3e8">DemoObs</a>
+</li>
+<li>setLikelihood()
+: <a class="el" href="class___particle.html#aeb1b1887cbec98605483738832c09089">_Particle</a>
+</li>
+<li>setStateVector()
+: <a class="el" href="class___particle.html#a1d0dbaaf587fa9269509871e4bef856a">_Particle</a>
+</li>
+<li>SIR()
+: <a class="el" href="class_s_i_r.html#a1638d662725aa9caccb998b314e56612">SIR&lt; Particle, Viewer &gt;</a>
+</li>
 <li>step()
-: <a class="el" href="class___filter.html#a5d96caec5b7492ffae8e2c4e5b660134">_Filter&lt; Particle, Viewer &gt;</a>
-, <a class="el" href="class_s_i_r.html#a64afc078893eceef31ff6eb067b525eb">SIR&lt; Particle, Viewer &gt;</a>
-, <a class="el" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+: <a class="el" href="class_i_c_o_n_d.html#ac741ddbe4112cf7e1e448e4ecd3072fa">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+, <a class="el" href="class_s_i_r.html#a7093692612f88723e78ee73e2ed78c2e">SIR&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class___filter.html#a5d96caec5b7492ffae8e2c4e5b660134">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
 </ul>
 
@@ -219,13 +357,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>update()
 : <a class="el" href="class___filter.html#a5d36b80070a75e838e7c499d0a58e521">_Filter&lt; Particle, Viewer &gt;</a>
-, <a class="el" href="class_i_c_o_n_d.html#a0abe8cd3eb5eb4a8f620de5e47cdb518">ICOND&lt; Particle, Detector, Viewer &gt;</a>
-, <a class="el" href="class_s_i_r.html#a5e33bc5a3fde128e88a35f712adb711d">SIR&lt; Particle, Viewer &gt;</a>
 , <a class="el" href="class_i_c_o_n_d.html#a33d15f6211e31d95c974768d326efb43">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+, <a class="el" href="class_s_i_r.html#a61d1b373648c75e3c0043c3418dd7a57">SIR&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class_demo_obs.html#ae8a6e16104f9d5ab9fa3a947a1cb6400">DemoObs</a>
+</li>
+<li>updateDisplay()
+: <a class="el" href="class___viewer.html#ab127c8610c79bcacd1b112d5f33e5ab7">_Viewer&lt; Particle &gt;</a>
 </li>
 <li>updateWeights()
-: <a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5">ICOND&lt; Particle, Detector, Viewer &gt;</a>
-, <a class="el" href="class___filter.html#a1f06cb348d64c4d773a7dd908967b9bd">_Filter&lt; Particle, Viewer &gt;</a>
+: <a class="el" href="class___filter.html#a1f06cb348d64c4d773a7dd908967b9bd">_Filter&lt; Particle, Viewer &gt;</a>
+, <a class="el" href="class_i_c_o_n_d.html#a7f2560fb2283f949c373c101f3efb2c5">ICOND&lt; Particle, Detector, Viewer &gt;</a>
 </li>
 </ul>
 
@@ -234,8 +375,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>~_Filter()
 : <a class="el" href="class___filter.html#a835c5b5c329a15bb0f0cdd8ced43107f">_Filter&lt; Particle, Viewer &gt;</a>
 </li>
+<li>~_Observation()
+: <a class="el" href="class___observation.html#ac3b6c92cd66af3eabbaf36acb7ca6d06">_Observation</a>
+</li>
+<li>~DemoObs()
+: <a class="el" href="class_demo_obs.html#a9b35bc44e8dd56a2bdde8fdd2222d451">DemoObs</a>
+</li>
 <li>~ICOND()
 : <a class="el" href="class_i_c_o_n_d.html#a26d20c01f07dc9ad6027f80bf604e624">ICOND&lt; Particle, Detector, Viewer &gt;</a>
+</li>
+<li>~SIR()
+: <a class="el" href="class_s_i_r.html#a54f0fee54da60e3b313dfd907cbe1980">SIR&lt; Particle, Viewer &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -257,7 +407,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Jun 20 2013 12:21:35 for Particle Filter by
+    <li class="footer">Generated on Thu Jun 20 2013 17:38:28 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

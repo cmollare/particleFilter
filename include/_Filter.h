@@ -154,6 +154,8 @@ class _Filter
 
 		double _Neff; //!< Number of efficient particles
 		double _Ns; //!< Threshold to launch resampling
+
+		boost::random::mt19937* _rng;
 };
 
 #include "_Filter.tpp"
