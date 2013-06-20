@@ -46,7 +46,7 @@ class _Filter
 		//! \brief filter initialisation
 		//! \param observation Observation model
 		//!
-		//! Init weights, particles, and sample particles from prior law.
+		//! Init weights and particles.
 		//!
 		virtual void init(_Observation& observation);
 

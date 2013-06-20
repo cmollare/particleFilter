@@ -33,8 +33,6 @@ void _Filter<Particle, Viewer>::init(_Observation& observation)
 	//Initiate weights
 	this->_vWeights.resize(this->_nbParticles, 1./this->_nbParticles);
 	this->_cdf.resize(this->_nbParticles, 0); //weight cdf
-
-	for (int i=0 ; i<this->_nbParticles ; i++) this->_vParticles[i]->sampleFromPrior();
 }
 
 template <class Particle, class Viewer>
