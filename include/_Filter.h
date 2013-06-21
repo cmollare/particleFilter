@@ -29,7 +29,7 @@ class _Filter
 	public:
 
 		//!
-		//! \fn _Filter(int nbPaticles)
+		//! \fn _Filter(int nbParticles)
 		//! \brief Constructor
 		//! \param nbParticles the number of particles used for filtering
 		//!
@@ -155,7 +155,7 @@ class _Filter
 		double _Neff; //!< Number of efficient particles
 		double _Ns; //!< Threshold to launch resampling
 
-		boost::random::mt19937* _rng;
+		boost::random::mt19937* _rng; //!< Pointer on random seed
 };
 
 #include "_Filter.tpp"

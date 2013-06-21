@@ -33,5 +33,7 @@ var NAVTREEINDEX =
 "_filter_env_8h.html":[1,0,9],
 "_i_c_o_n_d_8h.html":[1,0,10],
 "_mouse_detector_8h.html":[1,0,11],
-"_s_i_r_8h.html":[1,0,12]
+"_s_i_r_8h.html":[1,0,12],
+"globals.html":[1,1,0],
+"globals_defs.html":[1,1,1]
 };

@@ -102,7 +102,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MouseDetector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="MouseDetector" --><!-- doxytag: inherits="_Detector" --><div class="dynheader">
+<!-- doxytag: class="MouseDetector" --><!-- doxytag: inherits="_Detector" -->
+<p>Implementation of detector of mouse in the image.  
+ <a href="class_mouse_detector.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_mouse_detector_8h_source.html">MouseDetector.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for MouseDetector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_mouse_detector__inherit__graph.png" border="0" usemap="#_mouse_detector_inherit__map" alt="Inheritance graph"/></div>
@@ -114,26 +119,59 @@ Collaboration diagram for MouseDetector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_mouse_detector__coll__graph.png" border="0" usemap="#_mouse_detector_coll__map" alt="Collaboration graph"/></div>
 <map name="_mouse_detector_coll__map" id="_mouse_detector_coll__map">
-<area shape="rect" id="node2" href="class___detector.html" title="Abstract class for detector." alt="" coords="5,5,83,35"/><area shape="rect" id="node4" href="struct_mouse_event.html" title="MouseEvent" alt="" coords="107,5,200,35"/></map>
+<area shape="rect" id="node2" href="class___detector.html" title="Abstract class for detector." alt="" coords="5,5,83,35"/><area shape="rect" id="node4" href="struct_mouse_event.html" title="Structure that manages mouse events." alt="" coords="107,5,200,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_mouse_detector-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab119e9e8efc2acfa3244e153974e31f5"></a><!-- doxytag: member="MouseDetector::MouseDetector" ref="ab119e9e8efc2acfa3244e153974e31f5" args="(std::string windowName=&quot;RES&quot;)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>MouseDetector</b> (std::string windowName=&quot;RES&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#ab119e9e8efc2acfa3244e153974e31f5">MouseDetector</a> (std::string windowName=&quot;RES&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab119e9e8efc2acfa3244e153974e31f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a006509bab6862f14872861a28fd038db"></a><!-- doxytag: member="MouseDetector::~MouseDetector" ref="a006509bab6862f14872861a28fd038db" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#a006509bab6862f14872861a28fd038db">~MouseDetector</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#ac998b07903aed7974ecaea0522b8402a">init</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector initialisation.  <a href="#ac998b07903aed7974ecaea0522b8402a"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of detector.  <a href="#ac998b07903aed7974ecaea0522b8402a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#a145e8ce7950a13d5ea40546258daa674">detect</a> (<a class="el" href="class___observation.html">_Observation</a> &amp;obs)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process detection.  <a href="#a145e8ce7950a13d5ea40546258daa674"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch detection.  <a href="#a145e8ce7950a13d5ea40546258daa674"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe55bab6a9c8383f5a3fc43ce17e7031"></a><!-- doxytag: member="MouseDetector::_mouseEvent" ref="afe55bab6a9c8383f5a3fc43ce17e7031" args="" -->
-<a class="el" href="struct_mouse_event.html">MouseEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_mouseEvent</b></td></tr>
+<a class="el" href="struct_mouse_event.html">MouseEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#afe55bab6a9c8383f5a3fc43ce17e7031">_mouseEvent</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer on <a class="el" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a> structure <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8380f236dd81f15a8a3ad822bc8215b8"></a><!-- doxytag: member="MouseDetector::_windowName" ref="a8380f236dd81f15a8a3ad822bc8215b8" args="" -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_windowName</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mouse_detector.html#a8380f236dd81f15a8a3ad822bc8215b8">_windowName</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of window used for detection. <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Implementation of detector of mouse in the image. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab119e9e8efc2acfa3244e153974e31f5"></a><!-- doxytag: member="MouseDetector::MouseDetector" ref="ab119e9e8efc2acfa3244e153974e31f5" args="(std::string windowName=&quot;RES&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mouse_detector.html#ab119e9e8efc2acfa3244e153974e31f5">MouseDetector::MouseDetector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>windowName</em> = <code>&quot;RES&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowName</td><td>Name of window where detector is active </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a145e8ce7950a13d5ea40546258daa674"></a><!-- doxytag: member="MouseDetector::detect" ref="a145e8ce7950a13d5ea40546258daa674" args="(_Observation &amp;obs)" -->
 <div class="memitem">
@@ -150,14 +188,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_windowName</b
 </div>
 <div class="memdoc">
 
-<p>Process detection. </p>
+<p>Launch detection. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">obs</td><td>Observation model </td></tr>
+    <tr><td class="paramname">obs</td><td>Current observation model </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>return _currenDetection (state vector of detection) </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Return current detection </dd></dl>
 
 <p>Implements <a class="el" href="class___detector.html#ae7eacac2105058c66c3e6d8d949effd2">_Detector</a>.</p>
 
@@ -178,14 +216,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_windowName</b
 </div>
 <div class="memdoc">
 
-<p>Detector initialisation. </p>
+<p>Initialisation of detector. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">obs</td><td>Observation model</td></tr>
+    <tr><td class="paramname">obs</td><td>Current observation model </td></tr>
   </table>
   </dd>
 </dl>
-<p>Pure virtual function </p>
 
 <p>Implements <a class="el" href="class___detector.html#a88b6d10baba871d26ff7123621993169">_Detector</a>.</p>
 
@@ -202,7 +239,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_windowName</b
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -215,7 +252,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_windowName</b
     <ul>
       <li class="navelem"><a class="el" href="class_mouse_detector.html">MouseDetector</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 18:25:10 for Particle Filter by
+    <li class="footer">Generated on Fri Jun 21 2013 10:44:15 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

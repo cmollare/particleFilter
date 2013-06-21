@@ -103,7 +103,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DemoViewer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="DemoViewer" --><!-- doxytag: inherits="_Viewer&lt; DemoParticle &gt;" --><div class="dynheader">
+<!-- doxytag: class="DemoViewer" --><!-- doxytag: inherits="_Viewer&lt; DemoParticle &gt;" -->
+<p>Demonstration class for viewer implementation.  
+ <a href="class_demo_viewer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_demo_viewer_8h_source.html">DemoViewer.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for DemoViewer:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_demo_viewer__inherit__graph.png" border="0" usemap="#_demo_viewer_inherit__map" alt="Inheritance graph"/></div>
@@ -122,43 +127,300 @@ Collaboration diagram for DemoViewer:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa781f343c452af66e0f26c768fe187d3"></a><!-- doxytag: member="DemoViewer::DemoViewer" ref="aa781f343c452af66e0f26c768fe187d3" args="(std::string outputName)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>DemoViewer</b> (std::string outputName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3346a64143850df38cb66ede7eb9e94f"></a><!-- doxytag: member="DemoViewer::DemoViewer" ref="a3346a64143850df38cb66ede7eb9e94f" args="(std::string outputName, std::string controllerName)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>DemoViewer</b> (std::string outputName, std::string controllerName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02298e734b34e7c734fde96df41f3c1f"></a><!-- doxytag: member="DemoViewer::updateImage" ref="a02298e734b34e7c734fde96df41f3c1f" args="(cv::Mat &amp;newImage)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateImage</b> (cv::Mat &amp;newImage)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4cc099961b677fde46014ca81e8d350"></a><!-- doxytag: member="DemoViewer::displaySampling" ref="ab4cc099961b677fde46014ca81e8d350" args="(std::vector&lt; DemoParticle * &gt; &amp;particles)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displaySampling</b> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefdc8610d867125b62e34f624e1d46cc"></a><!-- doxytag: member="DemoViewer::displayWeightedParticles" ref="aefdc8610d867125b62e34f624e1d46cc" args="(std::vector&lt; DemoParticle * &gt; &amp;particles, std::vector&lt; double &gt; &amp;weights)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayWeightedParticles</b> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles, std::vector&lt; double &gt; &amp;weights)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a442be28db33f9d362747d9a6fda1e18c"></a><!-- doxytag: member="DemoViewer::displayResampling" ref="a442be28db33f9d362747d9a6fda1e18c" args="(std::vector&lt; DemoParticle * &gt; &amp;particles)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayResampling</b> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22f02c8010cf247ca47a47acbe113f54"></a><!-- doxytag: member="DemoViewer::displayEstimatedParticle" ref="a22f02c8010cf247ca47a47acbe113f54" args="(DemoParticle *estimatedParticle)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayEstimatedParticle</b> (<a class="el" href="class_demo_particle.html">DemoParticle</a> *estimatedParticle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#aa781f343c452af66e0f26c768fe187d3">DemoViewer</a> (std::string outputName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for viewer only.  <a href="#aa781f343c452af66e0f26c768fe187d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a3346a64143850df38cb66ede7eb9e94f">DemoViewer</a> (std::string outputName, std::string controllerName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for viewer + observation model change.  <a href="#a3346a64143850df38cb66ede7eb9e94f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a430183af15926817e010bad9cea4833e"></a><!-- doxytag: member="DemoViewer::~DemoViewer" ref="a430183af15926817e010bad9cea4833e" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a430183af15926817e010bad9cea4833e">~DemoViewer</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a02298e734b34e7c734fde96df41f3c1f">updateImage</a> (cv::Mat &amp;newImage)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update image for current display.  <a href="#a02298e734b34e7c734fde96df41f3c1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#ab4cc099961b677fde46014ca81e8d350">displaySampling</a> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display sampled particles.  <a href="#ab4cc099961b677fde46014ca81e8d350"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#aefdc8610d867125b62e34f624e1d46cc">displayWeightedParticles</a> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles, std::vector&lt; double &gt; &amp;weights)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display particles with their weights.  <a href="#aefdc8610d867125b62e34f624e1d46cc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a442be28db33f9d362747d9a6fda1e18c">displayResampling</a> (std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;particles)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display particles after resampling step.  <a href="#a442be28db33f9d362747d9a6fda1e18c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a22f02c8010cf247ca47a47acbe113f54">displayEstimatedParticle</a> (<a class="el" href="class_demo_particle.html">DemoParticle</a> *estimatedParticle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display estimated particle.  <a href="#a22f02c8010cf247ca47a47acbe113f54"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98cab78ea65250faee96c20b981e21a2"></a><!-- doxytag: member="DemoViewer::updateDisplay" ref="a98cab78ea65250faee96c20b981e21a2" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateDisplay</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5a701ad7aa430ac743715bd42bf94de"></a><!-- doxytag: member="DemoViewer::getCurrentObs" ref="ac5a701ad7aa430ac743715bd42bf94de" args="()" -->
-cv::Vec3b &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentObs</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a98cab78ea65250faee96c20b981e21a2">updateDisplay</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update viewer state. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">cv::Vec3b &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a7f16cf62a704aaef0b7d21947b0786a6">getCurrentObs</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current observation model.  <a href="#a7f16cf62a704aaef0b7d21947b0786a6"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bef65c6db0d266188adb21475bbf4c8"></a><!-- doxytag: member="DemoViewer::updateCtrlImage" ref="a7bef65c6db0d266188adb21475bbf4c8" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateCtrlImage</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a7bef65c6db0d266188adb21475bbf4c8">updateCtrlImage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update display of controller part. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ab7c75a1b86ce450548e4dd5e650ede"></a><!-- doxytag: member="DemoViewer::_outputName" ref="a0ab7c75a1b86ce450548e4dd5e650ede" args="" -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_outputName</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a0ab7c75a1b86ce450548e4dd5e650ede">_outputName</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">filter output window's name <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94125fa485c0407285fab81244dd64bb"></a><!-- doxytag: member="DemoViewer::_controllerName" ref="a94125fa485c0407285fab81244dd64bb" args="" -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_controllerName</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a94125fa485c0407285fab81244dd64bb">_controllerName</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">controller view window's name <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac365494da78fba640941bed1f03a589b"></a><!-- doxytag: member="DemoViewer::_currentImage" ref="ac365494da78fba640941bed1f03a589b" args="" -->
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>_currentImage</b></td></tr>
+cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#ac365494da78fba640941bed1f03a589b">_currentImage</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">original image <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5796f7cae8b723339d8f56ff3355528d"></a><!-- doxytag: member="DemoViewer::_outputImage" ref="a5796f7cae8b723339d8f56ff3355528d" args="" -->
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>_outputImage</b></td></tr>
+cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a5796f7cae8b723339d8f56ff3355528d">_outputImage</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">display of filter <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3309faa9ad4c6bdf2f4a89a8a37cabb"></a><!-- doxytag: member="DemoViewer::_controllerImage" ref="ac3309faa9ad4c6bdf2f4a89a8a37cabb" args="" -->
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>_controllerImage</b></td></tr>
+cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#ac3309faa9ad4c6bdf2f4a89a8a37cabb">_controllerImage</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">display of controller <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464021a1396be7682a82c42369d3bbaf"></a><!-- doxytag: member="DemoViewer::_currentObs" ref="a464021a1396be7682a82c42369d3bbaf" args="" -->
-cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><b>_currentObs</b></td></tr>
+cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_demo_viewer.html#a464021a1396be7682a82c42369d3bbaf">_currentObs</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">current observation model <br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Demonstration class for viewer implementation. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa781f343c452af66e0f26c768fe187d3"></a><!-- doxytag: member="DemoViewer::DemoViewer" ref="aa781f343c452af66e0f26c768fe187d3" args="(std::string outputName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_demo_viewer.html#aa781f343c452af66e0f26c768fe187d3">DemoViewer::DemoViewer</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>outputName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor for viewer only. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputName</td><td>Window's name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3346a64143850df38cb66ede7eb9e94f"></a><!-- doxytag: member="DemoViewer::DemoViewer" ref="a3346a64143850df38cb66ede7eb9e94f" args="(std::string outputName, std::string controllerName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_demo_viewer.html#aa781f343c452af66e0f26c768fe187d3">DemoViewer::DemoViewer</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>outputName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>controllerName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor for viewer + observation model change. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputName</td><td>Window's name </td></tr>
+    <tr><td class="paramname">controllerName</td><td>Controller window's name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a22f02c8010cf247ca47a47acbe113f54"></a><!-- doxytag: member="DemoViewer::displayEstimatedParticle" ref="a22f02c8010cf247ca47a47acbe113f54" args="(DemoParticle *estimatedParticle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_viewer.html#a22f02c8010cf247ca47a47acbe113f54">DemoViewer::displayEstimatedParticle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_demo_particle.html">DemoParticle</a> *&#160;</td>
+          <td class="paramname"><em>estimatedParticle</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display estimated particle. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">estimatedParticle</td><td>Pointer on estimated particle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class___viewer.html#a60ab7332f5c193ef292b6cf84534014e">_Viewer&lt; DemoParticle &gt;</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_demo_viewer_a22f02c8010cf247ca47a47acbe113f54_cgraph.png" border="0" usemap="#class_demo_viewer_a22f02c8010cf247ca47a47acbe113f54_cgraph" alt=""/></div>
+<map name="class_demo_viewer_a22f02c8010cf247ca47a47acbe113f54_cgraph" id="class_demo_viewer_a22f02c8010cf247ca47a47acbe113f54_cgraph">
+<area shape="rect" id="node3" href="class___particle.html#af896501fec2ee7084468c1fcd7b33b48" title="Get particle state vector." alt="" coords="304,5,472,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a442be28db33f9d362747d9a6fda1e18c"></a><!-- doxytag: member="DemoViewer::displayResampling" ref="a442be28db33f9d362747d9a6fda1e18c" args="(std::vector&lt; DemoParticle * &gt; &amp;particles)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_viewer.html#a442be28db33f9d362747d9a6fda1e18c">DemoViewer::displayResampling</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>particles</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display particles after resampling step. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">particles</td><td>Particle vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class___viewer.html#ad0ed7063f847cb2e1e553d78c2ad1dda">_Viewer&lt; DemoParticle &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4cc099961b677fde46014ca81e8d350"></a><!-- doxytag: member="DemoViewer::displaySampling" ref="ab4cc099961b677fde46014ca81e8d350" args="(std::vector&lt; DemoParticle * &gt; &amp;particles)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_viewer.html#ab4cc099961b677fde46014ca81e8d350">DemoViewer::displaySampling</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>particles</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display sampled particles. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">particles</td><td>Particle vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class___viewer.html#a125f4ffefacb98585ca587df65bb271b">_Viewer&lt; DemoParticle &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefdc8610d867125b62e34f624e1d46cc"></a><!-- doxytag: member="DemoViewer::displayWeightedParticles" ref="aefdc8610d867125b62e34f624e1d46cc" args="(std::vector&lt; DemoParticle * &gt; &amp;particles, std::vector&lt; double &gt; &amp;weights)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_viewer.html#aefdc8610d867125b62e34f624e1d46cc">DemoViewer::displayWeightedParticles</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_demo_particle.html">DemoParticle</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>particles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display particles with their weights. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">particles</td><td>Particle vector </td></tr>
+    <tr><td class="paramname">weights</td><td>Associated weights </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class___viewer.html#a6c32bfc6269157282459f2160344b1e2">_Viewer&lt; DemoParticle &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f16cf62a704aaef0b7d21947b0786a6"></a><!-- doxytag: member="DemoViewer::getCurrentObs" ref="a7f16cf62a704aaef0b7d21947b0786a6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Vec3b &amp; <a class="el" href="class_demo_viewer.html#a7f16cf62a704aaef0b7d21947b0786a6">DemoViewer::getCurrentObs</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get current observation model. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Current observation model </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02298e734b34e7c734fde96df41f3c1f"></a><!-- doxytag: member="DemoViewer::updateImage" ref="a02298e734b34e7c734fde96df41f3c1f" args="(cv::Mat &amp;newImage)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_demo_viewer.html#a02298e734b34e7c734fde96df41f3c1f">DemoViewer::updateImage</a> </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>newImage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update image for current display. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newImage</td><td>New image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_demo_viewer_a02298e734b34e7c734fde96df41f3c1f_cgraph.png" border="0" usemap="#class_demo_viewer_a02298e734b34e7c734fde96df41f3c1f_cgraph" alt=""/></div>
+<map name="class_demo_viewer_a02298e734b34e7c734fde96df41f3c1f_cgraph" id="class_demo_viewer_a02298e734b34e7c734fde96df41f3c1f_cgraph">
+<area shape="rect" id="node3" href="class_demo_viewer.html#a7bef65c6db0d266188adb21475bbf4c8" title="Update display of controller part." alt="" coords="236,5,436,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_demo_viewer_8h_source.html">DemoViewer.h</a></li>
 <li>src/viewer/DemoViewer.cpp</li>
@@ -170,7 +432,7 @@ cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><b>_currentObs</b><
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -183,7 +445,7 @@ cv::Vec3b&#160;</td><td class="memItemRight" valign="bottom"><b>_currentObs</b><
     <ul>
       <li class="navelem"><a class="el" href="class_demo_viewer.html">DemoViewer</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 18:25:10 for Particle Filter by
+    <li class="footer">Generated on Fri Jun 21 2013 10:44:15 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

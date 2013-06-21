@@ -7,7 +7,7 @@ var class_demo_viewer =
     [ "displayResampling", "class_demo_viewer.html#a442be28db33f9d362747d9a6fda1e18c", null ],
     [ "displaySampling", "class_demo_viewer.html#ab4cc099961b677fde46014ca81e8d350", null ],
     [ "displayWeightedParticles", "class_demo_viewer.html#aefdc8610d867125b62e34f624e1d46cc", null ],
-    [ "getCurrentObs", "class_demo_viewer.html#ac5a701ad7aa430ac743715bd42bf94de", null ],
+    [ "getCurrentObs", "class_demo_viewer.html#a7f16cf62a704aaef0b7d21947b0786a6", null ],
     [ "updateCtrlImage", "class_demo_viewer.html#a7bef65c6db0d266188adb21475bbf4c8", null ],
     [ "updateDisplay", "class_demo_viewer.html#a98cab78ea65250faee96c20b981e21a2", null ],
     [ "updateImage", "class_demo_viewer.html#a02298e734b34e7c734fde96df41f3c1f", null ],

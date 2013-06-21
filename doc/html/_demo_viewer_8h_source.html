@@ -75,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -112,38 +113,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="___viewer_8h.html" title="Abstract class for viewer.">_Viewer.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_demo_particle_8h.html" title="Demonstration class for particle implementation.">DemoParticle.h</a>&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="class_demo_viewer.html">00017</a> <span class="keyword">class </span><a class="code" href="class_demo_viewer.html">DemoViewer</a> : <span class="keyword">public</span> <a class="code" href="class___viewer.html" title="Abstract class for viewer.">_Viewer</a>&lt;DemoParticle&gt;
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019     <span class="keyword">public</span>:
-<a name="l00020"></a>00020                 <a class="code" href="class_demo_viewer.html">DemoViewer</a>(std::string outputName);
-<a name="l00021"></a>00021                 <a class="code" href="class_demo_viewer.html">DemoViewer</a>(std::string outputName, std::string controllerName);
-<a name="l00022"></a>00022         ~<a class="code" href="class_demo_viewer.html">DemoViewer</a>();
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024                 <span class="keywordtype">void</span> updateImage(cv::Mat&amp; newImage);
-<a name="l00025"></a>00025         <span class="keywordtype">void</span> displaySampling(std::vector&lt;DemoParticle*&gt;&amp; particles);
-<a name="l00026"></a>00026                 <span class="keywordtype">void</span> displayWeightedParticles(std::vector&lt;DemoParticle*&gt;&amp; particles, std::vector&lt;double&gt;&amp; weights);
-<a name="l00027"></a>00027         <span class="keywordtype">void</span> displayResampling(std::vector&lt;DemoParticle*&gt;&amp; particles);
-<a name="l00028"></a>00028                 <span class="keywordtype">void</span> displayEstimatedParticle(<a class="code" href="class_demo_particle.html" title="Demonstration class for particle implementation.">DemoParticle</a>* estimatedParticle);
-<a name="l00029"></a>00029                 <span class="keywordtype">void</span> updateDisplay();
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031                 <span class="keyword">inline</span> cv::Vec3b&amp; getCurrentObs()
-<a name="l00032"></a>00032                 {
-<a name="l00033"></a>00033                         <span class="keywordflow">return</span> _currentObs;
-<a name="l00034"></a>00034                 }
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036     <span class="keyword">protected</span>:
-<a name="l00037"></a>00037                 <span class="keywordtype">void</span> updateCtrlImage();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039                 std::string _outputName;
-<a name="l00040"></a>00040                 std::string _controllerName;
-<a name="l00041"></a>00041         cv::Mat _currentImage;
-<a name="l00042"></a>00042         cv::Mat _outputImage;
-<a name="l00043"></a>00043                 cv::Mat _controllerImage;
-<a name="l00044"></a>00044                 cv::Vec3b _currentObs;
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 };
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="preprocessor">#endif // DEMOVIEWER_H</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class_demo_viewer.html">00022</a> <span class="keyword">class </span><a class="code" href="class_demo_viewer.html" title="Demonstration class for viewer implementation.">DemoViewer</a> : <span class="keyword">public</span> <a class="code" href="class___viewer.html" title="Abstract class for viewer.">_Viewer</a>&lt;DemoParticle&gt;
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     <span class="keyword">public</span>:
+<a name="l00025"></a>00025 
+<a name="l00031"></a>00031                 <a class="code" href="class_demo_viewer.html#aa781f343c452af66e0f26c768fe187d3" title="Constructor for viewer only.">DemoViewer</a>(std::string outputName);
+<a name="l00032"></a>00032 
+<a name="l00039"></a>00039                 <a class="code" href="class_demo_viewer.html#aa781f343c452af66e0f26c768fe187d3" title="Constructor for viewer only.">DemoViewer</a>(std::string outputName, std::string controllerName);
+<a name="l00040"></a>00040 
+<a name="l00045"></a>00045         <a class="code" href="class_demo_viewer.html#a430183af15926817e010bad9cea4833e" title="Destructor.">~DemoViewer</a>();
+<a name="l00046"></a>00046 
+<a name="l00052"></a>00052                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#a02298e734b34e7c734fde96df41f3c1f" title="Update image for current display.">updateImage</a>(cv::Mat&amp; newImage);
+<a name="l00053"></a>00053 
+<a name="l00059"></a>00059                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#ab4cc099961b677fde46014ca81e8d350" title="Display sampled particles.">displaySampling</a>(std::vector&lt;DemoParticle*&gt;&amp; particles);
+<a name="l00060"></a>00060 
+<a name="l00067"></a>00067                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#aefdc8610d867125b62e34f624e1d46cc" title="Display particles with their weights.">displayWeightedParticles</a>(std::vector&lt;DemoParticle*&gt;&amp; particles, std::vector&lt;double&gt;&amp; weights);
+<a name="l00068"></a>00068 
+<a name="l00074"></a>00074         <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#a442be28db33f9d362747d9a6fda1e18c" title="Display particles after resampling step.">displayResampling</a>(std::vector&lt;DemoParticle*&gt;&amp; particles);
+<a name="l00075"></a>00075 
+<a name="l00081"></a>00081                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#a22f02c8010cf247ca47a47acbe113f54" title="Display estimated particle.">displayEstimatedParticle</a>(<a class="code" href="class_demo_particle.html" title="Demonstration class for particle implementation.">DemoParticle</a>* estimatedParticle);
+<a name="l00082"></a>00082 
+<a name="l00087"></a>00087                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#a98cab78ea65250faee96c20b981e21a2" title="Update viewer state.">updateDisplay</a>();
+<a name="l00088"></a>00088 
+<a name="l00094"></a><a class="code" href="class_demo_viewer.html#a7f16cf62a704aaef0b7d21947b0786a6">00094</a>                 <span class="keyword">inline</span> cv::Vec3b&amp; <a class="code" href="class_demo_viewer.html#a7f16cf62a704aaef0b7d21947b0786a6" title="Get current observation model.">getCurrentObs</a>()
+<a name="l00095"></a>00095                 {
+<a name="l00096"></a>00096                         <span class="keywordflow">return</span> <a class="code" href="class_demo_viewer.html#a464021a1396be7682a82c42369d3bbaf" title="current observation model">_currentObs</a>;
+<a name="l00097"></a>00097                 }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099     <span class="keyword">protected</span>:
+<a name="l00100"></a>00100 
+<a name="l00105"></a>00105                 <span class="keywordtype">void</span> <a class="code" href="class_demo_viewer.html#a7bef65c6db0d266188adb21475bbf4c8" title="Update display of controller part.">updateCtrlImage</a>();
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="class_demo_viewer.html#a0ab7c75a1b86ce450548e4dd5e650ede">00107</a>                 std::string <a class="code" href="class_demo_viewer.html#a0ab7c75a1b86ce450548e4dd5e650ede" title="filter output window&#39;s name">_outputName</a>; 
+<a name="l00108"></a><a class="code" href="class_demo_viewer.html#a94125fa485c0407285fab81244dd64bb">00108</a>                 std::string <a class="code" href="class_demo_viewer.html#a94125fa485c0407285fab81244dd64bb" title="controller view window&#39;s name">_controllerName</a>; 
+<a name="l00109"></a><a class="code" href="class_demo_viewer.html#ac365494da78fba640941bed1f03a589b">00109</a>                 cv::Mat <a class="code" href="class_demo_viewer.html#ac365494da78fba640941bed1f03a589b" title="original image">_currentImage</a>; 
+<a name="l00110"></a><a class="code" href="class_demo_viewer.html#a5796f7cae8b723339d8f56ff3355528d">00110</a>                 cv::Mat <a class="code" href="class_demo_viewer.html#a5796f7cae8b723339d8f56ff3355528d" title="display of filter">_outputImage</a>; 
+<a name="l00111"></a><a class="code" href="class_demo_viewer.html#ac3309faa9ad4c6bdf2f4a89a8a37cabb">00111</a>                 cv::Mat <a class="code" href="class_demo_viewer.html#ac3309faa9ad4c6bdf2f4a89a8a37cabb" title="display of controller">_controllerImage</a>; 
+<a name="l00112"></a><a class="code" href="class_demo_viewer.html#a464021a1396be7682a82c42369d3bbaf">00112</a>                 cv::Vec3b <a class="code" href="class_demo_viewer.html#a464021a1396be7682a82c42369d3bbaf" title="current observation model">_currentObs</a>; 
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 };
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="preprocessor">#endif // DEMOVIEWER_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -151,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -164,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_demo_viewer_8h.html">DemoViewer.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 18:25:10 for Particle Filter by
+    <li class="footer">Generated on Fri Jun 21 2013 10:44:15 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

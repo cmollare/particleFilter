@@ -31,7 +31,7 @@ class DemoParticle : public _Particle
 		//!
 		//! \fn DemoParticle(FilterEnv* pFilterEnv)
 		//! \brief Constructor
-		//! \param Pointer to FilterEnv instance
+		//! \param pFilterEnv Pointer to FilterEnv instance
 		//!
 		DemoParticle(FilterEnv* pFilterEnv);
 
@@ -67,7 +67,7 @@ class DemoParticle : public _Particle
 		virtual double evaluateFromDynamic();
 
 		//!
-		//! \fn virtual double evaluateFromImportance()
+		//! \fn virtual double evaluateFromDetector();
 		//! \brief Evaluate sample from detector multivariate gaussian
 		//!
 		virtual double evaluateFromDetector();

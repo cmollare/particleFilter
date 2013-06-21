@@ -75,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -113,42 +114,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_demo_obs_8h.html" title="Demo class for observation model.">DemoObs.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="struct_mouse_event.html">00018</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_mouse_event.html">MouseEvent</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020     <span class="keywordtype">int</span> x;
-<a name="l00021"></a>00021     <span class="keywordtype">int</span> y;
-<a name="l00022"></a>00022         <span class="keywordtype">bool</span> isDetection;
-<a name="l00023"></a>00023 }<a class="code" href="struct_mouse_event.html">MouseEvent</a>;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">static</span> <span class="keywordtype">void</span> onMouse(<span class="keywordtype">int</span> evt, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> flags, <span class="keywordtype">void</span>* params)
-<a name="l00026"></a>00026 {
-<a name="l00027"></a>00027     <a class="code" href="struct_mouse_event.html">MouseEvent</a> *mouseEvt = (<a class="code" href="struct_mouse_event.html">MouseEvent</a>*) params;
+<a name="l00022"></a><a class="code" href="struct_mouse_event.html">00022</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a><a class="code" href="struct_mouse_event.html#a2b89f4529866190e623ee04b37f59b30">00024</a>         <span class="keywordtype">int</span> <a class="code" href="struct_mouse_event.html#a2b89f4529866190e623ee04b37f59b30" title="x mouse position int the image">x</a>; 
+<a name="l00025"></a><a class="code" href="struct_mouse_event.html#a766882bf2ff5883fa797761cdb1bb7b7">00025</a>         <span class="keywordtype">int</span> <a class="code" href="struct_mouse_event.html#a766882bf2ff5883fa797761cdb1bb7b7" title="y mouse position int the image">y</a>; 
+<a name="l00026"></a><a class="code" href="struct_mouse_event.html#a41dacc159662c2ca9c24dac4260a2d12">00026</a>         <span class="keywordtype">bool</span> <a class="code" href="struct_mouse_event.html#a41dacc159662c2ca9c24dac4260a2d12" title="True if there is a detection.">isDetection</a>; 
+<a name="l00027"></a>00027 }<a class="code" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a>;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029         mouseEvt-&gt;isDetection = <span class="keyword">false</span>;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031         <span class="keywordflow">if</span>(evt==CV_EVENT_MOUSEMOVE &amp;&amp; (flags &amp; CV_EVENT_FLAG_CTRLKEY))
-<a name="l00032"></a>00032     {
-<a name="l00033"></a>00033                 mouseEvt-&gt;x = x;
-<a name="l00034"></a>00034                 mouseEvt-&gt;y = y;
-<a name="l00035"></a>00035                 mouseEvt-&gt;isDetection = <span class="keyword">true</span>;
-<a name="l00036"></a>00036     }
-<a name="l00037"></a>00037 }
 <a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="class_mouse_detector.html">00039</a> <span class="keyword">class </span><a class="code" href="class_mouse_detector.html">MouseDetector</a> : <span class="keyword">public</span> <a class="code" href="class___detector.html" title="Abstract class for detector.">_Detector</a>
+<a name="l00039"></a>00039 <span class="keyword">static</span> <span class="keywordtype">void</span> onMouse(<span class="keywordtype">int</span> evt, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> flags, <span class="keywordtype">void</span>* params)
 <a name="l00040"></a>00040 {
-<a name="l00041"></a>00041     <span class="keyword">public</span>:
-<a name="l00042"></a>00042                 <a class="code" href="class_mouse_detector.html">MouseDetector</a>(std::string windowName=<span class="stringliteral">&quot;RES&quot;</span>);
-<a name="l00043"></a>00043         ~<a class="code" href="class_mouse_detector.html">MouseDetector</a>();
+<a name="l00041"></a>00041     <a class="code" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a> *mouseEvt = (<a class="code" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a>*) params;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         mouseEvt-&gt;<a class="code" href="struct_mouse_event.html#a41dacc159662c2ca9c24dac4260a2d12" title="True if there is a detection.">isDetection</a> = <span class="keyword">false</span>;
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_mouse_detector.html#ac998b07903aed7974ecaea0522b8402a" title="Detector initialisation.">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs);
-<a name="l00046"></a>00046         <span class="keyword">virtual</span> std::vector&lt;double&gt;&amp; <a class="code" href="class_mouse_detector.html#a145e8ce7950a13d5ea40546258daa674" title="Process detection.">detect</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048     <span class="keyword">protected</span>:
-<a name="l00049"></a>00049         <a class="code" href="struct_mouse_event.html">MouseEvent</a>* _mouseEvent;
-<a name="l00050"></a>00050                 std::string _windowName;
-<a name="l00051"></a>00051 };
+<a name="l00045"></a>00045         <span class="keywordflow">if</span>(evt==CV_EVENT_MOUSEMOVE &amp;&amp; (flags &amp; CV_EVENT_FLAG_CTRLKEY))
+<a name="l00046"></a>00046     {
+<a name="l00047"></a>00047                 mouseEvt-&gt;<a class="code" href="struct_mouse_event.html#a2b89f4529866190e623ee04b37f59b30" title="x mouse position int the image">x</a> = x;
+<a name="l00048"></a>00048                 mouseEvt-&gt;<a class="code" href="struct_mouse_event.html#a766882bf2ff5883fa797761cdb1bb7b7" title="y mouse position int the image">y</a> = y;
+<a name="l00049"></a>00049                 mouseEvt-&gt;<a class="code" href="struct_mouse_event.html#a41dacc159662c2ca9c24dac4260a2d12" title="True if there is a detection.">isDetection</a> = <span class="keyword">true</span>;
+<a name="l00050"></a>00050     }
+<a name="l00051"></a>00051 }
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // MOUSEDETECTOR_H</span>
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="class_mouse_detector.html">00058</a> <span class="keyword">class </span><a class="code" href="class_mouse_detector.html" title="Implementation of detector of mouse in the image.">MouseDetector</a> : <span class="keyword">public</span> <a class="code" href="class___detector.html" title="Abstract class for detector.">_Detector</a>
+<a name="l00059"></a>00059 {
+<a name="l00060"></a>00060     <span class="keyword">public</span>:
+<a name="l00061"></a>00061 
+<a name="l00067"></a>00067                 <a class="code" href="class_mouse_detector.html#ab119e9e8efc2acfa3244e153974e31f5" title="Constructor.">MouseDetector</a>(std::string windowName=<span class="stringliteral">&quot;RES&quot;</span>);
+<a name="l00068"></a>00068 
+<a name="l00073"></a>00073         <a class="code" href="class_mouse_detector.html#a006509bab6862f14872861a28fd038db" title="Destructor.">~MouseDetector</a>();
+<a name="l00074"></a>00074 
+<a name="l00080"></a>00080                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_mouse_detector.html#ac998b07903aed7974ecaea0522b8402a" title="Initialisation of detector.">init</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs);
+<a name="l00081"></a>00081 
+<a name="l00088"></a>00088         <span class="keyword">virtual</span> std::vector&lt;double&gt;&amp; <a class="code" href="class_mouse_detector.html#a145e8ce7950a13d5ea40546258daa674" title="Launch detection.">detect</a>(<a class="code" href="class___observation.html" title="Abstract class for observation model.">_Observation</a>&amp; obs);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090     <span class="keyword">protected</span>:
+<a name="l00091"></a><a class="code" href="class_mouse_detector.html#afe55bab6a9c8383f5a3fc43ce17e7031">00091</a>                 <a class="code" href="struct_mouse_event.html" title="Structure that manages mouse events.">MouseEvent</a>* <a class="code" href="class_mouse_detector.html#afe55bab6a9c8383f5a3fc43ce17e7031" title="pointer on MouseEvent structure">_mouseEvent</a>; 
+<a name="l00092"></a><a class="code" href="class_mouse_detector.html#a8380f236dd81f15a8a3ad822bc8215b8">00092</a>                 std::string <a class="code" href="class_mouse_detector.html#a8380f236dd81f15a8a3ad822bc8215b8" title="Name of window used for detection.">_windowName</a>; 
+<a name="l00093"></a>00093 };
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // MOUSEDETECTOR_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -156,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -169,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_mouse_detector_8h.html">MouseDetector.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jun 20 2013 18:25:10 for Particle Filter by
+    <li class="footer">Generated on Fri Jun 21 2013 10:44:15 for Particle Filter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

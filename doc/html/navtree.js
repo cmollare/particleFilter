@@ -12,7 +12,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", null, [
-      [ "File List", "files.html", "files" ]
+      [ "File List", "files.html", "files" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Defines", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];

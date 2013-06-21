@@ -11,7 +11,7 @@
 #define PARTICLE_H
 
 //!
-//! \def PI 3.14159265359
+//! \def PI
 //! \brief pi constant
 //!
 #define PI 3.14159265359
